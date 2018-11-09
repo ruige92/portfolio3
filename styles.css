@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Archivo:400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 100% "Roboto", sans-serif;
+  color: #333;
+}
+
+.disableScroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.ScrollSceneIndicators {
+  z-index: 9999999 !important;
+}
+
+.sidebar {
+  position: relative;
+}
+.sidebar .whiteBurger {
+  fill: #000;
+}
+.sidebar .hamburger {
+  position: fixed;
+  z-index: 2;
+  left: 4%;
+  top: 40px;
+  cursor: pointer;
+}
+.sidebar .hamburger path {
+  transition: all 1s ease;
+}
+.sidebar .slideLeft {
+  width: 8%;
+  transform: translateX(0);
+}
+.sidebar nav {
+  font-family: "Roboto", sans-serif;
+  transform: translateX(-10px);
+  width: 0px;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+  z-index: 2;
+}
+.sidebar nav .wordLeft {
+  margin-left: 0px;
+}
+.sidebar nav a {
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  color: #000;
+  margin-left: -150px;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.sidebar nav svg {
+  margin-left: -150px;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#intro-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#intro-wrapper .intro-bg {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+}
+#intro-wrapper .intro-content {
+  background: #000;
+  transition: background-color 500ms linear;
+}
+#intro-wrapper .intro-content .intro-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#intro-wrapper .intro-content .intro-body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro-wrapper .intro-content .intro-body .svg-wrapper {
+  width: 320px;
+  position: absolute;
+  cursor: pointer;
+}
+#intro-wrapper .intro-content .intro-body .startBtn {
+  color: #000;
+  font-size: 8rem;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+@keyframes noise-anim {
+  0% {
+    clip: rect(28px, 9999px, 62px, 0);
+  }
+  3.3333333333% {
+    clip: rect(55px, 9999px, 31px, 0);
+  }
+  6.6666666667% {
+    clip: rect(67px, 9999px, 98px, 0);
+  }
+  10% {
+    clip: rect(32px, 9999px, 54px, 0);
+  }
+  13.3333333333% {
+    clip: rect(56px, 9999px, 33px, 0);
+  }
+  16.6666666667% {
+    clip: rect(21px, 9999px, 25px, 0);
+  }
+  20% {
+    clip: rect(97px, 9999px, 93px, 0);
+  }
+  23.3333333333% {
+    clip: rect(4px, 9999px, 3px, 0);
+  }
+  26.6666666667% {
+    clip: rect(92px, 9999px, 38px, 0);
+  }
+  30% {
+    clip: rect(89px, 9999px, 68px, 0);
+  }
+  33.3333333333% {
+    clip: rect(28px, 9999px, 59px, 0);
+  }
+  36.6666666667% {
+    clip: rect(18px, 9999px, 13px, 0);
+  }
+  40% {
+    clip: rect(97px, 9999px, 33px, 0);
+  }
+  43.3333333333% {
+    clip: rect(45px, 9999px, 11px, 0);
+  }
+  46.6666666667% {
+    clip: rect(31px, 9999px, 59px, 0);
+  }
+  50% {
+    clip: rect(11px, 9999px, 81px, 0);
+  }
+  53.3333333333% {
+    clip: rect(2px, 9999px, 33px, 0);
+  }
+  56.6666666667% {
+    clip: rect(61px, 9999px, 33px, 0);
+  }
+  60% {
+    clip: rect(57px, 9999px, 70px, 0);
+  }
+  63.3333333333% {
+    clip: rect(85px, 9999px, 5px, 0);
+  }
+  66.6666666667% {
+    clip: rect(57px, 9999px, 8px, 0);
+  }
+  70% {
+    clip: rect(42px, 9999px, 98px, 0);
+  }
+  73.3333333333% {
+    clip: rect(25px, 9999px, 1px, 0);
+  }
+  76.6666666667% {
+    clip: rect(45px, 9999px, 95px, 0);
+  }
+  80% {
+    clip: rect(68px, 9999px, 32px, 0);
+  }
+  83.3333333333% {
+    clip: rect(62px, 9999px, 62px, 0);
+  }
+  86.6666666667% {
+    clip: rect(76px, 9999px, 37px, 0);
+  }
+  90% {
+    clip: rect(27px, 9999px, 19px, 0);
+  }
+  93.3333333333% {
+    clip: rect(32px, 9999px, 77px, 0);
+  }
+  96.6666666667% {
+    clip: rect(31px, 9999px, 21px, 0);
+  }
+  100% {
+    clip: rect(30px, 9999px, 10px, 0);
+  }
+}
+@keyframes noise-anim2 {
+  0% {
+    clip: rect(27px, 9999px, 222px, 0);
+  }
+  8.5714285714% {
+    clip: rect(121px, 9999px, 167px, 0);
+  }
+  17.1428571429% {
+    clip: rect(39px, 9999px, 18px, 0);
+  }
+  25.7142857143% {
+    clip: rect(100px, 9999px, 135px, 0);
+  }
+  34.2857142857% {
+    clip: rect(197px, 9999px, 27px, 0);
+  }
+  42.8571428571% {
+    clip: rect(144px, 9999px, 64px, 0);
+  }
+  51.4285714286% {
+    clip: rect(7px, 9999px, 167px, 0);
+  }
+  60% {
+    clip: rect(98px, 9999px, 88px, 0);
+  }
+  68.5714285714% {
+    clip: rect(35px, 9999px, 103px, 0);
+  }
+  77.1428571429% {
+    clip: rect(69px, 9999px, 236px, 0);
+  }
+  85.7142857143% {
+    clip: rect(14px, 9999px, 116px, 0);
+  }
+  94.2857142857% {
+    clip: rect(154px, 9999px, 164px, 0);
+  }
+  102.8571428571% {
+    clip: rect(31px, 9999px, 256px, 0);
+  }
+  111.4285714286% {
+    clip: rect(38px, 9999px, 87px, 0);
+  }
+  120% {
+    clip: rect(147px, 9999px, 287px, 0);
+  }
+  128.5714285714% {
+    clip: rect(9px, 9999px, 68px, 0);
+  }
+  137.1428571429% {
+    clip: rect(83px, 9999px, 61px, 0);
+  }
+  145.7142857143% {
+    clip: rect(13px, 9999px, 13px, 0);
+  }
+  154.2857142857% {
+    clip: rect(142px, 9999px, 220px, 0);
+  }
+  162.8571428571% {
+    clip: rect(11px, 9999px, 174px, 0);
+  }
+  171.4285714286% {
+    clip: rect(116px, 9999px, 294px, 0);
+  }
+  180% {
+    clip: rect(57px, 9999px, 224px, 0);
+  }
+  188.5714285714% {
+    clip: rect(46px, 9999px, 140px, 0);
+  }
+  197.1428571429% {
+    clip: rect(109px, 9999px, 92px, 0);
+  }
+  205.7142857143% {
+    clip: rect(182px, 9999px, 116px, 0);
+  }
+  214.2857142857% {
+    clip: rect(60px, 9999px, 124px, 0);
+  }
+  222.8571428571% {
+    clip: rect(111px, 9999px, 291px, 0);
+  }
+  231.4285714286% {
+    clip: rect(54px, 9999px, 252px, 0);
+  }
+  240% {
+    clip: rect(81px, 9999px, 102px, 0);
+  }
+  248.5714285714% {
+    clip: rect(147px, 9999px, 77px, 0);
+  }
+  257.1428571429% {
+    clip: rect(139px, 9999px, 146px, 0);
+  }
+  265.7142857143% {
+    clip: rect(101px, 9999px, 145px, 0);
+  }
+  274.2857142857% {
+    clip: rect(62px, 9999px, 16px, 0);
+  }
+  282.8571428571% {
+    clip: rect(137px, 9999px, 71px, 0);
+  }
+  291.4285714286% {
+    clip: rect(11px, 9999px, 185px, 0);
+  }
+  300% {
+    clip: rect(87px, 9999px, 182px, 0);
+  }
+}
+#intro-wrapper .intro-content .intro-body .startBtn:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim2 2s infinite linear alternate-reverse;
+}
+#intro-wrapper .intro-content .intro-body .startBtn:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: 2px 0 blue;
+  top: 0;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+#intro-wrapper .intro-content .landing-content {
+  font-family: "Roboto", serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#intro-wrapper .intro-content .landing-content .landing-left {
+  margin-top: -50px;
+  color: #fff;
+  width: 50%;
+}
+#intro-wrapper .intro-content .landing-content .landing-left h1 {
+  margin-top: -20px;
+  font-size: 7rem;
+  font-weight: 500;
+}
+#intro-wrapper .intro-content .landing-content .landing-left h2 {
+  margin-top: -10px;
+  font-size: 5rem;
+  font-weight: 500;
+}
+#intro-wrapper .intro-content .landing-content .landing-left p {
+  width: 85%;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #555;
+}
+#intro-wrapper .intro-content .landing-content .landing-down {
+  position: absolute;
+  bottom: 10%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  transition: all 500ms linear;
+}
+
+.whiteBackground {
+  background-color: #fff !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
