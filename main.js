@@ -41,12 +41,15 @@ const introAnime=()=>{
       // duration:10
     })
     .add({
-      targets: '#menuIcon path',
+      targets:['#normTwitter','#normGmail','#normLinked','#normPhone','#menuIcon line'],
       fill: '#fff',
-      delay: function(el, i, l) {
-        return i * 100;
-      }
+      stroke: '#fff',
+      delay:1000,
     })
+    // .add({
+    //   targets: '#menuIcon line',
+    //   stroke: '#fff'
+    // })
     // .add({
     //   targets: '.intro-header .lines path',
     //   strokeDashoffset: [anime.setDashoffset, 0],
@@ -176,12 +179,10 @@ const shuffleText=()=>{
 //Changing background to black, other items to white
 const whiteBurger=()=>{
   anime({
-    targets: ['#menuIcon path','#scroll-icon #scroll-item','#scroll-icon #scroll-line'],
+    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#normTwitter','#normGmail','#normLinked','#normPhone'],
     stroke: '#000',
     fill: '#000',
-    delay: function(el, i, l) {
-      return i * 100;
-    }
+    delay: 300
   })
   anime({
     targets:['#home-wrapper','.intro-content'],
@@ -199,12 +200,52 @@ const blackBurger=()=>{
     easing:'easeOutQuint'
   })
   anime({
-    targets: ['#menuIcon path','#scroll-icon #scroll-item','#scroll-icon #scroll-line'],
+    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#normTwitter','#normGmail','#normLinked','#normPhone'],
     stroke: '#fff',
     fill: '#fff',
-    delay: function(el, i, l) {
-      return i * 100;
-    }
+    delay: 300
+  })
+}
+//Animating the menu burger icon to Close icon
+//if true, change icon to close, else back to menu icon
+const menuToClose=(close)=>{
+  if(close==true){
+    anime({
+      targets:'#m-line1',
+      x1:6.9,
+      x2:35.2,
+      y1:6.3,
+      y2:34.6
+    })
+    anime({
+      targets:'#m-line2',
+      x1:6.9,
+      x2:35.2,
+      y1:34.6,
+      y2:6.3
+    })
+  }else{
+    anime({
+      targets:'#m-line1',
+      x1:null,
+      x2:40,
+      y1:10.4,
+      y2:10.4
+    })
+    anime({
+      targets:'#m-line2',
+      x1:null,
+      x2:40,
+      y1:30.4,
+      y2:30.4
+    })
+  }
+}
+//change menu icon's color value
+const setIconColor=(color)=>{
+  anime({
+    targets:['#m-line1','#m-line2'],
+    stroke:color
   })
 }
 
@@ -224,23 +265,55 @@ var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: '100%'
         .addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
         .addTo(controller);
 
+
+
 //Main method
 const main =()=>{
-  $('body').addClass('disableScroll');
- $('.hamburger').on('mouseover',function(){
+  //force page scroll to top upon PAGE REFRESH
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+  });
+  //disable scrolling on intro page
+  $('body').addClass('overflowHidden');
+  //When Menu Icon is clicked
+ $('.hamburger').on('click',function(){
+   //ALWAYS set menu icon to BLACK
+   setIconColor('#000');
+   //disable scrolling on menu page
+   $('body').addClass('overflowHidden');
+   //IF menu ISOPEN(closeBurger class), then do the following
+   if($('.hamburger').hasClass('closeBurger')){
+     $('body').removeClass('overflowHidden');
+     //change icon back to burger icon
+     menuToClose(false);
+     $('.hamburger').removeClass('closeBurger');
+     $('nav').removeClass('slideLeft');
+     $('nav a').removeClass('wordLeft');
+     $('nav svg').removeClass('wordLeft');
+     return;
+   }
    $('nav').addClass('slideLeft');
    $('nav a').addClass('wordLeft');
    $('nav svg').addClass('wordLeft');
-   // $('#m-line2').attr("d",null);
-   // $('#m-line1').attr("d","m505.94 6.058c-8.077-8.077-21.172-8.077-29.249 0l-470.64 470.64c-8.077 8.077-8.077 21.172 0 29.249 4.038 4.04 9.332 6.058 14.625 6.058s10.586-2.019 14.625-6.059l470.64-470.64c8.076-8.076 8.076-21.171 0-29.248z");
-   // $('#m-line3').attr("d","m505.94 476.69l-470.64-470.64c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.076-8.077 21.171 0 29.248l470.64 470.64c4.038 4.039 9.332 6.058 14.625 6.058s10.587-2.019 14.624-6.057c8.075-8.078 8.075-21.173-1e-3 -29.25z");
+   $(this).addClass('closeBurger');
+   //change menu icon to close icon
+   menuToClose(true);
  })
- $('nav').on('mouseleave',function(){
-   $('nav').removeClass('slideLeft');
-   $('nav a').removeClass('wordLeft');
-   $('nav svg').removeClass('wordLeft');
- })
+ // $('.closeBurger').on('click',function(){
+ //   closeToMenu();
+ //   $(this).removeClass('closeBurger');
+ //   $('nav').removeClass('slideLeft');
+ //   $('nav a').removeClass('wordLeft');
+ //   $('nav svg').removeClass('wordLeft');
+ // })
+ // $('nav').on('mouseleave',function(){
+ //   $('nav').removeClass('slideLeft');
+ //   $('nav a').removeClass('wordLeft');
+ //   $('nav svg').removeClass('wordLeft');
+ // })
  $('.startBtn').on('click',function(){
+   //remove scroll disable when intro button is clicked
+   $('body').removeClass('overflowHidden');
    $('.intro-body').fadeOut();
    $('body').removeClass('disableScroll');
    // $(this).fadeOut();
@@ -248,15 +321,61 @@ const main =()=>{
    callShuffle();
    scrollDownIcon();
    //Adding animations to the intro content
-   $('.landing-left .isAnimated').addClass('bounceInLeft');
-   $('.landing-left .isAnimated').eq(0).css('animation-delay','.5s');
-   $('.landing-left .isAnimated').eq(1).css('animation-delay','.5s');
-   $('.landing-left .isAnimated').eq(2).css('animation-delay','.8s');
-   $('.landing-left .isAnimated').eq(3).css('animation-delay','1s');
+   $('.landing-left .isAnimated').addClass('fadeIn');
+   $('.landing-left .isAnimated').eq(0).css('animation-delay','1s');
+   $('.landing-left .isAnimated').eq(1).css('animation-delay','1.2s');
+   $('.landing-left .isAnimated').eq(2).css('animation-delay','1.4s');
+   $('.landing-left .isAnimated').eq(3).css('animation-delay','1.6s');
    $('.landing-down').addClass('fadeInUp');
    $('.landing-down').css('animation-delay','3s');
    // $('.landing-content').addClass('animated bounceIn');
+   $('.hamburger svg').addClass('animated slideInLeft');
+   $('.hamburger svg').css('animation-delay','3s');
+   $('.navContactIcons a svg').addClass('animated slideInRight');
+   $('.navContactIcons a svg').eq(0).css('animation-delay','3s');
+   $('.navContactIcons a svg').eq(1).css('animation-delay','3.2s');
+   $('.navContactIcons a svg').eq(2).css('animation-delay','3.4s');
+   $('.navContactIcons a svg').eq(3).css('animation-delay','3.6s');
+
  })
+ //Initialise Icon colors for normal and nav icons
+ $('.contactIcons').children().each(function(){
+   $(this).on('mouseover',function(){
+     $(this).children().attr('fill','#000');
+   }).on('mouseleave',function(){
+     $(this).children().attr('fill','#ccc');
+   })
+ })
+ $('nav a').each(function(){
+   $(this).on('mouseover',function(){
+     $(this).css('color','#000');
+   }).on('mouseleave',function(){
+     $(this).css('color','#ccc');
+   })
+ })
+ // Animation each contact icons
+ $('#normTwitter').on('mouseenter',function(){
+   anime({
+     targets:'#normTwitter',
+     rotate:'0.05turn'
+   })
+ }).on('mouseleave',function(){
+   anime({
+     targets:'#normTwitter',
+     rotate:'0turn'
+   })
+ })
+ // $('#normTwitter').on('mouseover',function(){
+ //   anime({
+ //     targets:'#normTwitter',
+ //     rotate:'0.05turn'
+ //   })
+ // }).on('mouseleave',function(){
+ //   anime({
+ //     targets:'#normTwitter',
+ //     rotate:'0turn'
+ //   })
+ // })
 
 
  // loading();
