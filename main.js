@@ -154,16 +154,6 @@ const randomWord=()=>{
   let word = words[Math.floor(Math.random()*words.length)];
   return word;
 }
-//Method that sets random word with random color to selected DOM.
-const callShuffle=()=>{
-  let newInt = setInterval(function(){
-
-    // let newWord = randomWord();
-    $('.landing-left [data-chaffle]').text(randomWord());
-    $('.landing-left [data-chaffle]').css('color',randomColor());
-    shuffleText();
-  },5000);
-}
 //shuffle generator, initialise
 const shuffleText=()=>{
   const elements = document.querySelectorAll('.landing-left [data-chaffle]');
@@ -175,6 +165,16 @@ const shuffleText=()=>{
     chaffle.init();
   });
 };
+//Method that sets random word with random color to selected DOM.
+const callShuffle=()=>{
+  let newInt = setInterval(function(){
+
+    // let newWord = randomWord();
+    $('.landing-left [data-chaffle]').text(randomWord());
+    $('.landing-left [data-chaffle]').css('color',randomColor());
+    shuffleText();
+  },5000);
+}
 
 //Changing background to black, other items to white
 const whiteBurger=()=>{
@@ -251,21 +251,301 @@ const setIconColor=(color)=>{
 
 //Using scroll magic to determine when to trigger page transition,
 //Intro to First Section
-var controller = new ScrollMagic.Controller();
+const pageSlideControl=()=>{
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({triggerElement: "#home-wrapper", duration: '100%'})
+          .on("enter", function () {
+            //Change theme to white
+            // sliderBackgroundTextIn();
+            sliderImageSectionShow();
+            whiteBurger();
+          })
+          .on("leave", function () {
+            //Change theme to black
+            // sliderBackgroundTextOut();
+            sliderImageSectionHide();
+            blackBurger();
+          })
+          .addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+          .addTo(controller);
 
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: '100%'})
-        .on("enter", function () {
-          //Change theme to white
-          whiteBurger();
-        })
-        .on("leave", function () {
-          //Change theme to black
-          blackBurger();
-        })
-        .addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
-        .addTo(controller);
+  // var scene2 = new ScrollMagic.Scene({triggerElement: "#landing-about", duration: '20%'})
+  //         .on("enter", function () {
+  //           //Change theme to white
+  //
+  //         })
+  //         .on("leave", function () {
+  //           //Change theme to black
+  //
+  //         })
+  //         .addIndicators({name: "1 - change home page content scaling"}) // add indicators (requires plugin)
+  //         .addTo(controller);
+}
 
+//Animation methods for slider
+const sliderImageSectionShow=()=>{
+  anime({
+    targets:['#image-carousel'],
+    // scale:'0.8',
+    opacity:'1',
+    duration:500,
+    easing: 'easeInQuart',
+    update:function(){
+      $('#image-carousel img').addClass('animated slideInLeft');
+      $('#slider-control').addClass('animated fadeInLeft');
+      $('.image-description').addClass('animated fadeInRight');
+      $('#background-text').addClass('animated fadeInUp');
+    }
+  })
+}
+const sliderImageSectionHide=()=>{
+  anime({
+    targets:['#image-carousel','#background-text'],
+    // scale:'0.8',
+    opacity:'0',
+    duration:100,
+    easing: 'easeInQuart',
+    update:function(){
+      $('#image-carousel img').removeClass('animated slideInLeft')
+      $('#slider-control').removeClass('animated fadeInLeft');
+      $('.image-description').removeClass('animated fadeInRight');
+      $('#background-text').removeClass('animated fadeInUp');
+    }
+  })
+}
 
+const sliderImageOut=()=>{
+  anime({
+    targets:'#image-carousel img',
+    scale:'0.8',
+    opacity:'0.8',
+    duration:200,
+    easing: 'easeInQuart',
+  })
+}
+const sliderImageIn=()=>{
+  anime({
+    targets:'#image-carousel img',
+    scale:'1',
+    opacity:'1',
+    duration:300,
+    easing: 'easeInQuart'
+  })
+}
+const sliderBarOut=()=>{
+  anime({
+    targets:'.dragdealer .red-bar',
+    width:'65px',
+    backgroundColor:'#000',
+    duration:200,
+    easing: 'linear'
+  })
+}
+const sliderBarIn=()=>{
+  anime({
+    targets:'.dragdealer .red-bar',
+    width:'50px',
+    backgroundColor:'#888',
+    duration:200,
+    easing: 'linear'
+  })
+}
+const sliderDescOut=()=>{
+  anime({
+    targets:'.image-description',
+    opacity:0,
+    easing: 'linear',
+    duration:300,
+    scale:0.9,
+  })
+}
+const sliderDescIn=()=>{
+  anime({
+    targets:'.image-description',
+    opacity:1,
+    scale:1,
+    duration:300,
+    easing: 'linear'
+  })
+}
+const sliderBackgroundTextOut=()=>{
+  anime({
+    targets:'#background-text',
+    opacity:0,
+    duration:500,
+    easing: 'linear'
+  })
+}
+const sliderBackgroundTextIn=()=>{
+  anime({
+    targets:'#background-text',
+    opacity:1,
+    duration:500,
+    easing: 'linear'
+  })
+}
+
+//global dragdealers
+let drag = new Dragdealer;
+let slider = new Dragdealer;
+//Method for checking, adding effects when drag using slider.
+const dragSlider=()=>{
+  //initialise a slider for images
+  drag = new Dragdealer('slider-control', {
+    steps: 4,
+    speed: 0.5,
+    loose: true,
+    animationCallback: function(x, y) {
+      let dragStep = 1;
+      dragStep = Object.values(this.getStep())[0];
+      $('#slider-control .value').text(dragStep+" / 4");
+      slider.setStep(dragStep);
+    }
+  });
+  let isDragging = false;
+  $("#slider-control .red-bar")
+  .mousedown(function() {
+      //clear out animated class to allow slide animation
+      $('#image-carousel img').removeClass('animated slideInLeft')
+      $('.image-description').removeClass('animated fadeInRight');
+      $('#background-text').removeClass('animated fadeInUp');
+      isDragging = false;
+      // $('#image-carousel img').addClass('dragging');
+      sliderImageOut();
+      //modifying the scroll bar if clicked
+      sliderBarOut();
+      //modifying the img desc if clicked
+      sliderDescOut();
+      //modifying the background txt if clicked
+      sliderBackgroundTextOut();
+  })
+  .mousemove(function() {
+      isDragging = true;
+  })
+  $(document).mouseup(function() {
+      let wasDragging = isDragging;
+      isDragging = false;
+      if (!wasDragging) {
+        sliderImageIn();
+        //modifying the scroll bar if clicked but no drag
+        sliderBarIn();
+        //modifying the img desc if clicked but no drag
+        sliderDescIn();
+        //modifying the background txt if clicked but no drag
+        sliderBackgroundTextIn();
+      }
+      if(wasDragging){
+        //
+        sliderImageIn();
+        //modifying the scroll bar after dragged
+        sliderBarIn();
+        //modifying the img desc after dragged
+        sliderDescIn();
+        //modifying the background text after dragged
+        sliderBackgroundTextIn();
+        let step = Object.values(slider.getStep())[0];
+        let value = Object.values(slider.getValue())[0];
+        //
+        //Update the slider indicator when using Image slide DIRECTLY
+        if(step==1){
+          drag.setValue(value);
+          $('#background-text').text('CISCO');
+        }else if(step==2){
+          drag.setValue(value);
+          $('#background-text').text('KENT');
+        }else if(step==3){
+          drag.setValue(value);
+          $('#background-text').text('RIOT');
+        }else if(step==4){
+          drag.setValue(value);
+          $('#background-text').text('GGP');
+        }
+      }
+    })
+}
+//Method for checking, adding effects when drag images DIRECTLY.
+const contentSlider=()=>{
+  //initialise a image drag
+  slider = new Dragdealer('image-carousel', {
+    steps: 4,
+    speed: 0.5,
+    loose: true,
+    requestAnimationFrame: true,
+  });
+  //CHECKING IMAGE DRAG
+  let isDragging = false;
+  $(".slide")
+  .mousedown(function() {
+      //clear out animated class to allow slide animation
+      $('#image-carousel img').removeClass('animated slideInLeft')
+      $('.image-description').removeClass('animated fadeInRight');
+      $('#background-text').removeClass('animated fadeInUp');
+      isDragging = false;
+      // $('#image-carousel img').addClass('dragging');
+      sliderImageOut();
+      //modifying the scroll bar if clicked
+      sliderBarOut();
+      //modifying the img desc if clicked
+      sliderDescOut();
+      //modifying the background txt if clicked
+      sliderBackgroundTextOut();
+  })
+  .mousemove(function() {
+      isDragging = true;
+  })
+  $(document).mouseup(function() {
+      let wasDragging = isDragging;
+      isDragging = false;
+      if (!wasDragging) {
+        //modifying the scroll bar if clicked but no drag
+        sliderImageIn();
+        //modifying the scroll bar if clicked but no drag
+        sliderBarIn();
+        //modifying the img desc if clicked but no drag
+        sliderDescIn();
+        //modifying the background txt if clicked but no drag
+        sliderBackgroundTextIn();
+      }
+      if(wasDragging){
+        //
+        sliderImageIn();
+        //modifying the scroll bar if clicked but no drag
+        sliderBarIn();
+        //modifying the img desc if clicked but no drag
+        sliderDescIn();
+        //modifying the background txt if clicked but no drag
+        sliderBackgroundTextIn();
+        // console.log('dragged')
+        let step = Object.values(slider.getStep())[0];
+        let value = Object.values(slider.getValue())[0];
+        //Update the slider indicator when using Image slide DIRECTLY
+        if(step==1){
+          drag.setValue(value);
+          $('#background-text').text('CISCO');
+        }else if(step==2){
+          drag.setValue(value);
+          $('#background-text').text('KENT');
+        }else if(step==3){
+          drag.setValue(value);
+          $('#background-text').text('RIOT');
+        }else if(step==4){
+          drag.setValue(value);
+          $('#background-text').text('GGP');
+        }
+      }
+
+  });
+
+  // $('#image-carousel img').each(function(){
+  //   $(this).on('click',function(){
+  //     if(isDragging){
+  //       $(this).parent().siblings().children().addClass('halfVisible')
+  //     }
+  //
+  //   })
+  // })
+
+}
 
 //Main method
 const main =()=>{
@@ -316,10 +596,13 @@ const main =()=>{
    $('body').removeClass('overflowHidden');
    $('.intro-body').fadeOut();
    $('body').removeClass('disableScroll');
-   // $(this).fadeOut();
+
    introAnime();
    callShuffle();
+   pageSlideControl();
    scrollDownIcon();
+   contentSlider();
+   dragSlider();
    //Adding animations to the intro content
    $('.landing-left .isAnimated').addClass('fadeIn');
    $('.landing-left .isAnimated').eq(0).css('animation-delay','1s');
@@ -336,7 +619,6 @@ const main =()=>{
    $('.navContactIcons a svg').eq(1).css('animation-delay','3.2s');
    $('.navContactIcons a svg').eq(2).css('animation-delay','3.4s');
    $('.navContactIcons a svg').eq(3).css('animation-delay','3.6s');
-
  })
  //Initialise Icon colors for normal and nav icons
  $('.contactIcons').children().each(function(){
@@ -354,17 +636,52 @@ const main =()=>{
    })
  })
  // Animation each contact icons
- $('#normTwitter').on('mouseenter',function(){
-   anime({
-     targets:'#normTwitter',
-     rotate:'0.05turn'
-   })
- }).on('mouseleave',function(){
-   anime({
-     targets:'#normTwitter',
-     rotate:'0turn'
-   })
- })
+ //
+ // $('#normTwitter').on('mouseenter',function(){
+ //   anime({
+ //     targets:'#normTwitter',
+ //     rotate:'0.05turn'
+ //   })
+ // }).on('mouseleave',function(){
+ //   anime({
+ //     targets:'#normTwitter',
+ //     rotate:'0turn'
+ //   })
+ // })
+ // $('#normGmail').on('mouseenter',function(){
+ //   anime({
+ //     targets:'#normGmail',
+ //     rotate:'0.05turn'
+ //   })
+ // }).on('mouseleave',function(){
+ //   anime({
+ //     targets:'#normGmail',
+ //     rotate:'0turn'
+ //   })
+ // })
+ // $('#normLinked').on('mouseenter',function(){
+ //   anime({
+ //     targets:'#normLinked',
+ //     rotate:'0.05turn'
+ //   })
+ // }).on('mouseleave',function(){
+ //   anime({
+ //     targets:'#normLinked',
+ //     rotate:'0turn'
+ //   })
+ // })
+ // $('#normPhone').on('mouseenter',function(){
+ //   anime({
+ //     targets:'#normPhone',
+ //     rotate:'0.05turn'
+ //   })
+ // }).on('mouseleave',function(){
+ //   anime({
+ //     targets:'#normPhone',
+ //     rotate:'0turn'
+ //   })
+ // })
+
  // $('#normTwitter').on('mouseover',function(){
  //   anime({
  //     targets:'#normTwitter',

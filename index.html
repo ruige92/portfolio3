@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <!-- <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.5.0/dist/jBox.all.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" type="text/css" href="fullpage.css" /> -->
+    <link rel="stylesheet" href="./dragDealer.css">
     <link rel="stylesheet" href="./animate.css">
     <meta charset="utf-8">
     <title>测试</title>
@@ -140,7 +141,7 @@
             <div class="landing-left">
               <h2 data-chaffle="en" class="animated isAnimated">JUNIOR</h2> <h2 class="animated isAnimated">WEB DEVELOPER</h2>
               <h1 class="animated isAnimated">BORUI FENG</h1>
-              <p class="animated isAnimated">An enthusiastic young professional who has over 3 years of overseas working experience. Passionate about games and modern technologies, with the goal of becoming an experienced web developer.</p>
+              <p id="landing-about" class="animated isAnimated">An enthusiastic young professional who has over 3 years of overseas working experience. Passionate about games and modern technologies, with the goal of becoming an experienced web developer.</p>
             </div>
             <div class="landing-down animated">
               <svg id="scroll-icon" width="20px" height="40px" enable-background="new 0 0 6.4 48.8" version="1.1" viewBox="0 0 6.4 48.8" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -156,15 +157,83 @@
         </article>
       </section><!-- INTRO Wrapper END -->
       <section class="section first" id="home-wrapper" data-anchor="homeAnchor">
-        <section class="demo" >
-          <div class="spacer s2"></div>
-          <div id="trigger2" class="spacer s0"></div>
-          <div id="animate2" class="box1 green">
-          	<p>This is a grey area.</p>
-          	<a href="#" class="viewsource">view source</a>
+        <div id="background-text">
+          CISCO
+        </div>
+        <div id="image-carousel" class="dragdealer">
+          <div class="handle">
+            <div class="slide" >
+              <div class="image-container">
+                <img class="active" id="slide1" src="./img/cisco2.jpg" alt="">
+              </div>
+              <div class="image-description">
+                <h1>UX & Front-End Developer</h1>
+                <p>Cisco Systems</p>
+                <p>08/2013 – 08/2014</p>
+              </div>
+              <!-- <div class="info">
+                <p class="title">Aston Martin DB4</p>
+                <p class="description"><strong>1959</strong> - 3.7L, 240hp</p>
+              </div> -->
+            </div>
+            <div class="slide" >
+              <div class="image-container">
+              <img id="slide2" src="./img/kent.jpg" alt="">
+              </div>
+              <div class="image-description">
+                <h1>Technical Consultant & Web Developer</h1>
+                <p>University of Kent, IT Clinic</p>
+                <p>09/2014 – 07/2015</p>
+              </div>
+              <!-- <div class="info">
+                <p class="title">Mercedes-Benz 300SL</p>
+                <p class="description"><strong>1956</strong> - 2996cc, 212-222hp</p>
+              </div> -->
+            </div>
+            <div class="slide" >
+              <div class="image-container">
+              <img id="slide3" src="./img/riot.jpg" alt="">
+              </div>
+              <div class="image-description">
+                <h1>Localisation QA Intern</h1>
+                <p>Riot Games</p>
+                <p>06/2015 – 09/2015</p>
+              </div>
+              <!-- <div class="info">
+                <p class="title">Jaguar E-Type</p>
+                <p class="description"><strong>1966</strong> - 3.8L, 265bhp</p>
+              </div> -->
+            </div>
+            <div class="slide" >
+              <div class="image-container">
+              <img id="slide4" src="./img/gis.jpg" alt="">
+              </div>
+              <div class="image-description">
+                <h1>QA Tester & Database Analyst</h1>
+                <p>GGP Systems Ltd</p>
+                <p>06/2016 – 06/2018</p>
+              </div>
+              <!-- <div class="info">
+                <p class="title">Maserati A6</p>
+                <p class="description"><strong>1950</strong> - 2L, 120bhp</p>
+              </div> -->
+            </div>
           </div>
-          <div class="spacer s2"></div>
-      	</section>
+        </div>
+        <div id="slider-control" class="dragdealer">
+          <div class="value"></div>
+          <div class="control-line"></div>
+          <div class="handle red-bar"></div>
+        </div>
+        <!-- <div class="slider dragdealer">
+          <div id="image-carousel" class="handle">
+            <img class="slide active"src="./img/cisco2.jpg" alt="">
+            <img class="slide" src="./img/kent.jpg" alt="">
+            <img class="slide" src="./img/riot.jpg" alt="">
+            <img class="slide" src="./img/gis.jpg" alt="">
+          </div>
+        </div> -->
+
       </section><!-- HOME Wrapper END -->
 
       <section class="section second" id="exp-wrapper" data-anchor="expAnchor">
@@ -188,9 +257,10 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.5.0/dist/jBox.all.min.js"></script> -->
     <!-- <script src="./fullpage.js"></script> -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script> -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="dragDealer.js"></script>
     <script src="anime.min.js"></script>
     <!-- <script src="./jquery.vide.min.js"></script> -->
     <script src="main.js"></script>
