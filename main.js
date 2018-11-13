@@ -591,9 +591,9 @@ $('#techTitle').on('click',function(){
   $('body').addClass('overflowHidden');
   $('.skill-titles').removeClass('techTitle desTitle proTitle');
   $('.skill-titles').addClass('techTitle');
-  $('#techTitle').fadeOut();
-  $('#desTitle').fadeOut();
-  $('#proTitle').fadeOut();
+  $('#techTitle').fadeOut(50);
+  $('#desTitle').fadeOut(50);
+  $('#proTitle').fadeOut(50);
   //
   // $('.skill-titles').fadeOut();
   anime({
@@ -674,9 +674,9 @@ $('#desTitle').on('click',function(){
   $('body').addClass('overflowHidden');
   $('.skill-titles').removeClass('techTitle desTitle proTitle');
   $('.skill-titles').addClass('desTitle');
-  $('#techTitle').fadeOut();
-  $('#desTitle').fadeOut();
-  $('#proTitle').fadeOut();
+  $('#techTitle').fadeOut(50);
+  $('#desTitle').fadeOut(50);
+  $('#proTitle').fadeOut(50);
   //
   // $('.skill-titles').fadeOut();
   anime({
@@ -757,9 +757,9 @@ $('#proTitle').on('click',function(){
   $('body').addClass('overflowHidden');
   $('.skill-titles').removeClass('techTitle desTitle proTitle');
   $('.skill-titles').addClass('proTitle');
-  $('#techTitle').fadeOut();
-  $('#desTitle').fadeOut();
-  $('#proTitle').fadeOut();
+  $('#techTitle').fadeOut(50);
+  $('#desTitle').fadeOut(50);
+  $('#proTitle').fadeOut(50);
   //
   // $('.skill-titles').fadeOut();
   anime({
