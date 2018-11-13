@@ -674,6 +674,9 @@ $('#desTitle').on('click',function(){
   $('body').addClass('overflowHidden');
   $('.skill-titles').removeClass('techTitle desTitle proTitle');
   $('.skill-titles').addClass('desTitle');
+  $('#techTitle').fadeOut();
+  $('#desTitle').fadeOut();
+  $('#proTitle').fadeOut();
   //
   // $('.skill-titles').fadeOut();
   anime({
@@ -754,6 +757,9 @@ $('#proTitle').on('click',function(){
   $('body').addClass('overflowHidden');
   $('.skill-titles').removeClass('techTitle desTitle proTitle');
   $('.skill-titles').addClass('proTitle');
+  $('#techTitle').fadeOut();
+  $('#desTitle').fadeOut();
+  $('#proTitle').fadeOut();
   //
   // $('.skill-titles').fadeOut();
   anime({
@@ -1044,7 +1050,7 @@ const main =()=>{
   $('body').addClass('overflowHidden');
   //When Menu Icon is clicked
 
- $('.startBtn').on('click',function(){
+ // $('.startBtn').on('click',function(){
    //remove scroll disable when intro button is clicked
    $('body').removeClass('overflowHidden');
    $('.intro-body').fadeOut();
@@ -1069,7 +1075,7 @@ const main =()=>{
    $('.hamburger svg').css('animation-delay','3s');
    $('.navContactIcons a svg').addClass('animated slideInLeft');
    $('.navContactIcons a svg').css('animation-delay','3s');
- })
+ // })
  //Initialise Icon colors for normal and nav icons
  $('.contactIcons').children().each(function(){
    $(this).on('mouseover',function(){
