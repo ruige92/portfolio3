@@ -11,13 +11,13 @@
   </head>
   <body id="body">
     <div class="sidebar">
-      <div class="hamburger animated fadeIn delay-1-5s">
+      <div class="hamburger">
         <svg id="menuIcon" width="30px" height="30px" enable-background="new 0 0 40 41.2" version="1.1" viewBox="0 0 40 41.2" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
           <line id="m-line1" fill="none" stroke="#000" stroke-width="2" x2="40" y1="10.4" y2="10.4"/>
           <line id="m-line2" fill="none" stroke="#000" stroke-width="2" x2="40" y1="30.4" y2="30.4"/>
         </svg>
       </div>
-      <div class="navContactIcons animated fadeIn delay-1-5s">
+      <!-- <div class="navContactIcons">
         <a href="#"><svg id="normTwitter" fill="#000" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 53 44">
           <path  d="M53 5.2A23 23 0 0 1 46.7 7 10.6 10.6 0 0 0 51.5.8a21.6 21.6 0 0 1-6.8 2.7 10.7 10.7 0 0 0-8-3.5A10.3 10.3 0 0 0 29 3.3a10.9 10.9 0 0 0-3.1 7.8 11.8 11.8 0 0 0 .3 2.6A30.9 30.9 0 0 1 3.7 2.3a11.3 11.3 0 0 0-1.5 5.4A10.5 10.5 0 0 0 7 16.9a9.8 9.8 0 0 1-4.9-1.4v.2a11.1 11.1 0 0 0 2.4 7.1 10.6 10.6 0 0 0 6.3 3.8 10.5 10.5 0 0 1-2.9.4l-2-.2a11.1 11.1 0 0 0 3.8 5.5 10.3 10.3 0 0 0 6.3 2.2c-4.3 3.5-8.7 5.3-13.5 5.3L0 39.5A30.1 30.1 0 0 0 16.7 44a30.3 30.3 0 0 0 19.6-6.9 33.9 33.9 0 0 0 6.2-7.3 31.8 31.8 0 0 0 5.1-17.4V11A22.4 22.4 0 0 0 53 5.2z" data-name="twitter"></path>
         </svg></a>
@@ -62,11 +62,11 @@
             c2.095,0.951,4.469,2.382,7.132,4.284c2.669,1.91,4.476,3.142,5.428,3.721l15.125,8.271c10.089,5.332,18.511,10.041,25.27,14.134
             s10.424,6.899,10.996,8.419c0.379,0.951,0.564,2.478,0.564,4.572C365.449,313.199,363.354,322.812,359.159,332.874z"/>
         </svg></a>
-      </div>
+      </div> -->
       <nav>
-        <a id="aboutBtn" href="#">ABOUT</a>
-        <a id="expBtn"href="#">EXPERIENCES</a>
-        <a id="conBtn"href="#">SKILLS</a>
+        <a id="aboutBtn" href="#landing-wrapper">ABOUT</a>
+        <a id="expBtn"href="#home-wrapper">EXPERIENCES</a>
+        <a id="conBtn"href="#skills-wrapper">SKILLS</a>
         <div class="contactIcons">
           <a href="#"><svg id="navTwitter" fill="#ccc" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 53 44">
             <path  d="M53 5.2A23 23 0 0 1 46.7 7 10.6 10.6 0 0 0 51.5.8a21.6 21.6 0 0 1-6.8 2.7 10.7 10.7 0 0 0-8-3.5A10.3 10.3 0 0 0 29 3.3a10.9 10.9 0 0 0-3.1 7.8 11.8 11.8 0 0 0 .3 2.6A30.9 30.9 0 0 1 3.7 2.3a11.3 11.3 0 0 0-1.5 5.4A10.5 10.5 0 0 0 7 16.9a9.8 9.8 0 0 1-4.9-1.4v.2a11.1 11.1 0 0 0 2.4 7.1 10.6 10.6 0 0 0 6.3 3.8 10.5 10.5 0 0 1-2.9.4l-2-.2a11.1 11.1 0 0 0 3.8 5.5 10.3 10.3 0 0 0 6.3 2.2c-4.3 3.5-8.7 5.3-13.5 5.3L0 39.5A30.1 30.1 0 0 0 16.7 44a30.3 30.3 0 0 0 19.6-6.9 33.9 33.9 0 0 0 6.2-7.3 31.8 31.8 0 0 0 5.1-17.4V11A22.4 22.4 0 0 0 53 5.2z" data-name="twitter"></path>
@@ -117,6 +117,7 @@
       </nav>
     </div>
     <div id="fullpage">
+      <!-- INTRO SECTION -->
       <section class="section" id="intro-wrapper">
         <div class="intro-bg">
         </div>
@@ -137,18 +138,16 @@
                <div class="startBtn animated fadeIn delay-1s" data-text="ENTER">ENTER</div>
             </div>
           </div>
+          <!-- LANDING SECTION -->
           <div class="landing-content" id="landing-wrapper">
             <div class="landing-left">
-              <h2 data-chaffle="en" class="animated isAnimated">JUNIOR</h2> <h2 class="animated isAnimated">WEB DEVELOPER</h2>
+              <h2 id="randomWord"data-chaffle="en" class="animated isAnimated">JUNIOR</h2> <h2 class="animated isAnimated">WEB DEVELOPER</h2>
               <h1 class="animated isAnimated">BORUI FENG</h1>
               <p id="landing-about" class="animated isAnimated">An enthusiastic young professional who has over 3 years of overseas working experience. Passionate about games and modern technologies, with the goal of becoming an experienced web developer.</p>
+
             </div>
             <div class="landing-down animated">
               <svg id="scroll-icon" width="20px" height="40px" enable-background="new 0 0 6.4 48.8" version="1.1" viewBox="0 0 6.4 48.8" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                <style type="text/css">
-                	/* .st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-                	.st1{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-miterlimit:10;} */
-                </style>
                 	<line opacity="0" id="scroll-line" stroke="#fff" x1="3.1" x2="3.1" y1=".3" y2="48.3"/>
                 <path opacity="0" id="scroll-item" stroke="#fff" fill="#fff" d="m3.1 20.3c-1.1 0-2-0.9-2-2v-14c0-1.1 0.9-2 2-2s2 0.9 2 2v14c0 1.1-0.9 2-2 2z"/>
               </svg>
@@ -156,10 +155,12 @@
           </div>
         </article>
       </section><!-- INTRO Wrapper END -->
+
+      <!-- EXP SECTION -->
       <section class="section first" id="home-wrapper" data-anchor="homeAnchor">
-        <div id="background-text">
+        <!-- <div id="background-text">
           CISCO
-        </div>
+        </div> -->
         <div id="image-carousel" class="dragdealer">
           <div class="handle">
             <div class="slide" >
@@ -167,56 +168,40 @@
                 <img class="active" id="slide1" src="./img/cisco2.jpg" alt="">
               </div>
               <div class="image-description">
-                <h1>UX & Front-End Developer</h1>
-                <p>Cisco Systems</p>
-                <p>08/2013 – 08/2014</p>
+                <h1 class="header1">Web Developer</h1>
+                <p class="header1">Cisco Systems</p>
+                <p class="header1">08/2013 – 08/2014</p>
               </div>
-              <!-- <div class="info">
-                <p class="title">Aston Martin DB4</p>
-                <p class="description"><strong>1959</strong> - 3.7L, 240hp</p>
-              </div> -->
             </div>
             <div class="slide" >
               <div class="image-container">
               <img id="slide2" src="./img/kent.jpg" alt="">
               </div>
               <div class="image-description">
-                <h1>Technical Consultant & Web Developer</h1>
-                <p>University of Kent, IT Clinic</p>
-                <p>09/2014 – 07/2015</p>
+                <h1 class="header2">Technical Consultant and Developer</h1>
+                <p class="header2">University of Kent, IT Clinic</p>
+                <p class="header2">09/2014 – 07/2015</p>
               </div>
-              <!-- <div class="info">
-                <p class="title">Mercedes-Benz 300SL</p>
-                <p class="description"><strong>1956</strong> - 2996cc, 212-222hp</p>
-              </div> -->
             </div>
             <div class="slide" >
               <div class="image-container">
               <img id="slide3" src="./img/riot.jpg" alt="">
               </div>
               <div class="image-description">
-                <h1>Localisation QA Intern</h1>
-                <p>Riot Games</p>
-                <p>06/2015 – 09/2015</p>
+                <h1 class="header3">Localisation QA Intern</h1>
+                <p class="header3">Riot Games</p>
+                <p class="header3">06/2015 – 09/2015</p>
               </div>
-              <!-- <div class="info">
-                <p class="title">Jaguar E-Type</p>
-                <p class="description"><strong>1966</strong> - 3.8L, 265bhp</p>
-              </div> -->
             </div>
             <div class="slide" >
               <div class="image-container">
               <img id="slide4" src="./img/gis.jpg" alt="">
               </div>
               <div class="image-description">
-                <h1>QA Tester & Database Analyst</h1>
-                <p>GGP Systems Ltd</p>
-                <p>06/2016 – 06/2018</p>
+                <h1 class="header4">QA Tester and Database Analyst</h1>
+                <p class="header4">GGP Systems Ltd</p>
+                <p class="header4">06/2016 – 06/2018</p>
               </div>
-              <!-- <div class="info">
-                <p class="title">Maserati A6</p>
-                <p class="description"><strong>1950</strong> - 2L, 120bhp</p>
-              </div> -->
             </div>
           </div>
         </div>
@@ -225,22 +210,146 @@
           <div class="control-line"></div>
           <div class="handle red-bar"></div>
         </div>
-        <!-- <div class="slider dragdealer">
-          <div id="image-carousel" class="handle">
-            <img class="slide active"src="./img/cisco2.jpg" alt="">
-            <img class="slide" src="./img/kent.jpg" alt="">
-            <img class="slide" src="./img/riot.jpg" alt="">
-            <img class="slide" src="./img/gis.jpg" alt="">
+      </section><!-- EXP section END -->
+
+      <!-- START of SKILL Section -->
+      <section class="section second" id="skills-wrapper" data-anchor="expAnchor">
+        <div class="skill-titles">
+          <p id="techTitle">Technology</p>
+          <p id="desTitle">Design</p>
+          <p id="proTitle">Process</p>
+        </div>
+        <div class="skill-head">
+          <div id="techHead">
+            Technology Skills
           </div>
-        </div> -->
+          <div id="desHead">
+            Art <br/>Design Skills
+          </div>
+          <div id="proHead">
+            Process Knowledge
+          </div>
+        </div>
+        <div class="skill-list">
+          <div id="techList">
+            <ul>
+              <li>Javascript</li>
+              <li>JQuery</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>SQL Database</li>
+              <li>CMS</li>
+              <li>Bootstrap</li>
+              <li>SASS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-list">
+          <div id="desList">
+            <ul>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Lightroom</li>
+              <li>Zbrush</li>
+              <li>Blender</li>
+              <li>Microsoft Office</li>
+              <li>UX/UI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-list">
+          <div id="proList">
+            <ul>
+              <li>Agile Methodologies</li>
+              <li>SCRUM</li>
+              <li>Software Test</li>
+              <li>Project Management</li>
+              <li>Software Development</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-back-btn">
+          <svg width="30px" height="30px" enable-background="new 0 0 40 41.2" version="1.1" viewBox="0 0 40 41.2" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+            <line fill="none" stroke="#000" stroke-width="2" x1="6.9" x2="35.2" y1="6.3" y2="34.6"/>
+            <line fill="none" stroke="#000" stroke-width="2" x1="6.9" x2="35.2" y1="34.6" y2="6.3"/>
+          </svg>
+        </div>
+        <div class="skill-boxes">
+          <div id="box1">
+            <!-- <p>Technology</p> -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(10, 16)">
+                <circle id="circle" cx="10" cy="10" r="10" fill="rgb(208,231,235)" stroke="rgb(208,231,235)" linejoin="round" stroke-width="1" fill-opacity="1" stroke-opacity="0.2">
+                </circle>
+              </g>
+            </svg>
+          </div>
+          <div id="box2">
+            <!-- <p>Design</p> -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(40, 16)">
+                <circle id="circle2" cx="10" cy="10" r="10" fill="rgb(28,131,135)" stroke="rgb(28,131,135)" linejoin="round" stroke-width="1" fill-opacity="1" stroke-opacity="0.2">
+                </circle>
+              </g>
+            </svg>
+          </div>
+          <div id="box3">
+            <!-- <p>Process</p> -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(70, 16)">
+                <circle id="circle3" cx="10" cy="10" r="10" fill="rgb(208,11,4)" stroke="rgb(208,11,4)" linejoin="round" stroke-width="1" fill-opacity="1" stroke-opacity="0.2">
+                </circle>
+              </g>
+            </svg>
+          </div>
 
-      </section><!-- HOME Wrapper END -->
 
-      <section class="section second" id="exp-wrapper" data-anchor="expAnchor">
+        </div>
 
-      </section><!-- Home Wrapper END -->
+          <!-- <svg width="100%" height="100%">
+            <g>
+              <rect id="circle" x="120" y="0" width="200px" height="200px" rx="0" ry="0" fill="rgb(28,211,135)" stroke="rgb(28,211,135)"/>
+            </g>
+          </svg> -->
+          <!-- <div class="skill-items" id="tech">
+            <h1>Technical</h1>
+            <ul>
+              <li>Javascript</li>
+              <li>JQuery</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>SQL Database</li>
+              <li>CMS</li>
+              <li>Bootstrap</li>
+              <li>SASS</li>
+            </ul>
+          </div> -->
+          <!-- <div class="skill-items" id="des">
+            <h1>Design</h1>
+            <ul>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Lightroom</li>
+              <li>Zbrush</li>
+              <li>Blender</li>
+              <li>Microsoft Office</li>
+              <li>UX/UI</li>
+            </ul>
+          </div> -->
+          <!-- <div class="skill-items" id="pro">
+            <h1>Process</h1>
+            <ul>
+              <li>Agile Methodologies</li>
+              <li>SCRUM</li>
+              <li>Software Test</li>
+              <li>Project Management</li>
+              <li>Software Development</li>
+            </ul>
+          </div> -->
 
-      <section class="section third" id="skills-wrapper" data-anchor="skillsAnchor">
+      </section><!-- END of SKill Section END -->
+
+      <section class="section third" id="other-wrapper" data-anchor="skillsAnchor">
 
       </section><!-- Home Wrapper END -->
 
@@ -257,7 +366,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.5.0/dist/jBox.all.min.js"></script> -->
     <!-- <script src="./fullpage.js"></script> -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
     <script src="dragDealer.js"></script>
