@@ -583,7 +583,6 @@ const skillTitlesAnimation=(tag)=>{
   });
 }
 
-
 $('#techTitle').on('click',function(){
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
@@ -864,7 +863,7 @@ $('.skill-back-btn').on('click',function(){
     })
     $('.hamburger').fadeIn();
     $('.navContactIcons').fadeIn();
-    $('#box1').css({'background-color':'rgb(208,231,235)'});
+    $('#box1').css({'background-color':'rgb(87, 220, 154)'});
     $('#box1').css({opacity:'1'});
     $('#box2').css({opacity:'1'});
     $('#box3').css({opacity:'1'});
@@ -909,7 +908,7 @@ $('.skill-back-btn').on('click',function(){
       })
       $('.hamburger').fadeIn();
       $('.navContactIcons').fadeIn();
-      $('#box2').css({'background-color':'rgb(28,131,135)'});
+      $('#box2').css({'background-color':'rgb(129, 205, 229)'});
       $('#box1').css({opacity:'1'});
       $('#box2').css({opacity:'1'});
       $('#box3').css({opacity:'1'});
@@ -952,7 +951,7 @@ $('.skill-back-btn').on('click',function(){
     })
     $('.hamburger').fadeIn();
     $('.navContactIcons').fadeIn();
-    $('#box3').css({'background-color':'rgb(208,11,4)'});
+    $('#box3').css({'background-color':'rgb(220, 87, 87)'});
     $('#box1').css({opacity:'1'});
     $('#box2').css({opacity:'1'});
     $('#box3').css({opacity:'1'});
@@ -1050,7 +1049,6 @@ const main =()=>{
    $('body').removeClass('overflowHidden');
    $('.intro-body').fadeOut();
    // $('body').removeClass('disableScroll');
-
    navMenuControl();
    introAnime();
    callShuffle();
