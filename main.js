@@ -1067,13 +1067,10 @@ const main =()=>{
    $('.landing-down').addClass('fadeInUp');
    $('.landing-down').css('animation-delay','3s');
 
-   $('.hamburger svg').addClass('animated slideInLeft');
+   $('.hamburger svg').addClass('animated slideInRight');
    $('.hamburger svg').css('animation-delay','3s');
-   $('.navContactIcons a svg').addClass('animated slideInRight');
-   $('.navContactIcons a svg').eq(0).css('animation-delay','3s');
-   $('.navContactIcons a svg').eq(1).css('animation-delay','3.2s');
-   $('.navContactIcons a svg').eq(2).css('animation-delay','3.4s');
-   $('.navContactIcons a svg').eq(3).css('animation-delay','3.6s');
+   $('.navContactIcons a svg').addClass('animated slideInLeft');
+   $('.navContactIcons a svg').css('animation-delay','3s');
  })
  //Initialise Icon colors for normal and nav icons
  $('.contactIcons').children().each(function(){
