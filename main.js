@@ -10,13 +10,9 @@ const introAnime=()=>{
       duration:2000
     })
     .add({
-      targets:['.hamburger','.navContactIcons'],
-      duration:200,
-      opacity:1
-    })
-    .add({
-      targets:['#normTwitter','#normGmail','#normLinked','#normPhone','#menuIcon line'],
+      targets:['.hamburger','#menuIcon line','#mainLogo'],
       fill: '#fff',
+      opacity:1,
       stroke: '#fff',
       delay:500,
     })
@@ -79,7 +75,7 @@ const callShuffle=()=>{
 //Changing background to black, other items to white
 const whiteBurger=()=>{
   anime({
-    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#normTwitter','#normGmail','#normLinked','#normPhone'],
+    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#mainLogo'],
     stroke: '#000',
     fill: '#000',
     delay: 300
@@ -100,7 +96,7 @@ const blackBurger=()=>{
     easing:'easeOutQuint'
   })
   anime({
-    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#normTwitter','#normGmail','#normLinked','#normPhone'],
+    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#mainLogo'],
     stroke: '#fff',
     fill: '#fff',
     delay: 300
@@ -179,14 +175,14 @@ const pageSlideControl=()=>{
             //Change theme to white
             // sliderBackgroundTextIn();
             sliderImageSectionShow();
-            landingContentIn();
+            // landingContentIn();
             whiteBurger();
           })
           .on("leave", function () {
             //Change theme to black
             // sliderBackgroundTextOut();
 
-            landingContentOut();
+            // landingContentOut();
             blackBurger();
           })
           .addIndicators({name: "1 - enter Exp Section"}) // add indicators (requires plugin)
@@ -236,12 +232,12 @@ const pageSlideControl=()=>{
             translateY:-20,
             easing:'linear'
           })
-          anime({
-            targets:'#landing-wrapper',
-            duration:200,
-            scale:1.1,
-            easing:'linear',
-          })
+          // anime({
+          //   targets:'#landing-wrapper',
+          //   duration:200,
+          //   scale:1.1,
+          //   easing:'linear',
+          // })
         })
         .on("leave", function () {
           //Change theme to black
@@ -251,12 +247,12 @@ const pageSlideControl=()=>{
             translateY:0,
             easing:'linear'
           })
-          anime({
-            targets:'#landing-wrapper',
-            duration:200,
-            scale:1,
-            easing:'linear',
-          })
+          // anime({
+          //   targets:'#landing-wrapper',
+          //   duration:200,
+          //   scale:1,
+          //   easing:'linear',
+          // })
         })
         .addIndicators({name: "0 - Inital section"}) // add indicators (requires plugin)
         .addTo(controller);
@@ -381,9 +377,33 @@ const sliderHeaderText=(tag)=>{
     easing: "easeOutExpo",
     duration: 1200,
     delay: function(el, i) {
-      return 500 + 30 * i;
+      return 300 + 30 * i;
     }
   });
+}
+
+$('.navContactIcons').on('mouseenter',function(){
+  logoFocus();
+}).on('mouseleave',function(){
+  logoReturn();
+})
+const logoFocus=()=>{
+  // Wrap every letter in a span
+  anime({
+    targets:"#mainLogo",
+    letterSpacing:['-9px','-5px'],
+    duration:200,
+    easing:'linear'
+  })
+}
+const logoReturn=()=>{
+  // Wrap every letter in a span
+  anime({
+    targets:"#mainLogo",
+    letterSpacing:['-5px','-9px'],
+    duration:200,
+    easing:'linear'
+  })
 }
 
 //global dragdealers
@@ -843,7 +863,7 @@ $('.skill-back-btn').on('click',function(){
       duration:200
     })
     $('.hamburger').fadeIn();
-    $('.navContactIcons').fadeOut();
+    $('.navContactIcons').fadeIn();
     $('#box1').css({'background-color':'rgb(208,231,235)'});
     $('#box1').css({opacity:'1'});
     $('#box2').css({opacity:'1'});
@@ -888,7 +908,7 @@ $('.skill-back-btn').on('click',function(){
         duration:200
       })
       $('.hamburger').fadeIn();
-      $('.navContactIcons').fadeOut();
+      $('.navContactIcons').fadeIn();
       $('#box2').css({'background-color':'rgb(28,131,135)'});
       $('#box1').css({opacity:'1'});
       $('#box2').css({opacity:'1'});
@@ -931,7 +951,7 @@ $('.skill-back-btn').on('click',function(){
       duration:200
     })
     $('.hamburger').fadeIn();
-    $('.navContactIcons').fadeOut();
+    $('.navContactIcons').fadeIn();
     $('#box3').css({'background-color':'rgb(208,11,4)'});
     $('#box1').css({opacity:'1'});
     $('#box2').css({opacity:'1'});

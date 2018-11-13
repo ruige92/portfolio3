@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Righteous");
 * {
   padding: 0;
   margin: 0;
@@ -28,16 +29,21 @@ body {
 .sidebar .hamburger {
   position: fixed;
   z-index: 99;
-  left: 4%;
+  right: 4%;
   top: 60px;
   cursor: pointer;
   opacity: 0;
 }
 .sidebar .navContactIcons {
+  font-family: "Righteous", cursive;
+  font-size: 126.2843px;
+  letter-spacing: -9px;
   position: fixed;
   z-index: 2;
-  right: 4%;
-  top: 60px;
+  left: 4%;
+  top: 40px;
+}
+.sidebar .navContactIcons #mainLogo {
   opacity: 0;
 }
 .sidebar .navContactIcons a {
@@ -143,207 +149,207 @@ body {
 }
 @keyframes noise-anim {
   0% {
-    clip: rect(24px, 9999px, 60px, 0);
+    clip: rect(38px, 9999px, 53px, 0);
   }
   3.3333333333% {
-    clip: rect(51px, 9999px, 83px, 0);
+    clip: rect(82px, 9999px, 58px, 0);
   }
   6.6666666667% {
-    clip: rect(36px, 9999px, 53px, 0);
+    clip: rect(14px, 9999px, 36px, 0);
   }
   10% {
-    clip: rect(53px, 9999px, 8px, 0);
+    clip: rect(45px, 9999px, 51px, 0);
   }
   13.3333333333% {
-    clip: rect(75px, 9999px, 65px, 0);
+    clip: rect(37px, 9999px, 39px, 0);
   }
   16.6666666667% {
-    clip: rect(50px, 9999px, 8px, 0);
+    clip: rect(46px, 9999px, 32px, 0);
   }
   20% {
-    clip: rect(36px, 9999px, 100px, 0);
+    clip: rect(94px, 9999px, 54px, 0);
   }
   23.3333333333% {
-    clip: rect(99px, 9999px, 77px, 0);
+    clip: rect(22px, 9999px, 64px, 0);
   }
   26.6666666667% {
-    clip: rect(93px, 9999px, 43px, 0);
+    clip: rect(7px, 9999px, 8px, 0);
   }
   30% {
-    clip: rect(62px, 9999px, 76px, 0);
+    clip: rect(46px, 9999px, 86px, 0);
   }
   33.3333333333% {
-    clip: rect(72px, 9999px, 35px, 0);
+    clip: rect(95px, 9999px, 55px, 0);
   }
   36.6666666667% {
-    clip: rect(15px, 9999px, 100px, 0);
+    clip: rect(69px, 9999px, 13px, 0);
   }
   40% {
-    clip: rect(73px, 9999px, 99px, 0);
+    clip: rect(10px, 9999px, 55px, 0);
   }
   43.3333333333% {
-    clip: rect(64px, 9999px, 60px, 0);
+    clip: rect(68px, 9999px, 82px, 0);
   }
   46.6666666667% {
-    clip: rect(20px, 9999px, 57px, 0);
+    clip: rect(14px, 9999px, 28px, 0);
   }
   50% {
-    clip: rect(88px, 9999px, 88px, 0);
+    clip: rect(80px, 9999px, 82px, 0);
   }
   53.3333333333% {
-    clip: rect(5px, 9999px, 38px, 0);
+    clip: rect(56px, 9999px, 56px, 0);
   }
   56.6666666667% {
-    clip: rect(76px, 9999px, 17px, 0);
+    clip: rect(17px, 9999px, 59px, 0);
   }
   60% {
-    clip: rect(19px, 9999px, 31px, 0);
+    clip: rect(43px, 9999px, 56px, 0);
   }
   63.3333333333% {
-    clip: rect(13px, 9999px, 25px, 0);
+    clip: rect(45px, 9999px, 40px, 0);
   }
   66.6666666667% {
-    clip: rect(64px, 9999px, 52px, 0);
+    clip: rect(41px, 9999px, 63px, 0);
   }
   70% {
-    clip: rect(50px, 9999px, 54px, 0);
+    clip: rect(85px, 9999px, 65px, 0);
   }
   73.3333333333% {
-    clip: rect(51px, 9999px, 12px, 0);
+    clip: rect(19px, 9999px, 18px, 0);
   }
   76.6666666667% {
-    clip: rect(34px, 9999px, 68px, 0);
+    clip: rect(76px, 9999px, 31px, 0);
   }
   80% {
-    clip: rect(48px, 9999px, 6px, 0);
+    clip: rect(16px, 9999px, 92px, 0);
   }
   83.3333333333% {
-    clip: rect(71px, 9999px, 10px, 0);
+    clip: rect(80px, 9999px, 3px, 0);
   }
   86.6666666667% {
-    clip: rect(27px, 9999px, 48px, 0);
+    clip: rect(40px, 9999px, 48px, 0);
   }
   90% {
-    clip: rect(11px, 9999px, 91px, 0);
+    clip: rect(49px, 9999px, 20px, 0);
   }
   93.3333333333% {
-    clip: rect(38px, 9999px, 60px, 0);
+    clip: rect(96px, 9999px, 52px, 0);
   }
   96.6666666667% {
-    clip: rect(62px, 9999px, 7px, 0);
+    clip: rect(87px, 9999px, 99px, 0);
   }
   100% {
-    clip: rect(6px, 9999px, 88px, 0);
+    clip: rect(22px, 9999px, 18px, 0);
   }
 }
 @keyframes noise-anim2 {
   0% {
-    clip: rect(144px, 9999px, 177px, 0);
+    clip: rect(197px, 9999px, 227px, 0);
   }
   8.5714285714% {
-    clip: rect(184px, 9999px, 95px, 0);
+    clip: rect(74px, 9999px, 9px, 0);
   }
   17.1428571429% {
-    clip: rect(3px, 9999px, 207px, 0);
+    clip: rect(30px, 9999px, 45px, 0);
   }
   25.7142857143% {
-    clip: rect(141px, 9999px, 97px, 0);
+    clip: rect(103px, 9999px, 104px, 0);
   }
   34.2857142857% {
-    clip: rect(125px, 9999px, 24px, 0);
+    clip: rect(119px, 9999px, 215px, 0);
   }
   42.8571428571% {
-    clip: rect(50px, 9999px, 14px, 0);
+    clip: rect(147px, 9999px, 103px, 0);
   }
   51.4285714286% {
-    clip: rect(146px, 9999px, 43px, 0);
+    clip: rect(30px, 9999px, 294px, 0);
   }
   60% {
-    clip: rect(50px, 9999px, 145px, 0);
+    clip: rect(187px, 9999px, 89px, 0);
   }
   68.5714285714% {
-    clip: rect(59px, 9999px, 36px, 0);
+    clip: rect(192px, 9999px, 283px, 0);
   }
   77.1428571429% {
-    clip: rect(106px, 9999px, 176px, 0);
+    clip: rect(62px, 9999px, 256px, 0);
   }
   85.7142857143% {
-    clip: rect(60px, 9999px, 137px, 0);
+    clip: rect(11px, 9999px, 67px, 0);
   }
   94.2857142857% {
-    clip: rect(48px, 9999px, 58px, 0);
+    clip: rect(128px, 9999px, 262px, 0);
   }
   102.8571428571% {
-    clip: rect(22px, 9999px, 206px, 0);
+    clip: rect(63px, 9999px, 216px, 0);
   }
   111.4285714286% {
-    clip: rect(135px, 9999px, 27px, 0);
+    clip: rect(195px, 9999px, 80px, 0);
   }
   120% {
-    clip: rect(134px, 9999px, 181px, 0);
+    clip: rect(110px, 9999px, 286px, 0);
   }
   128.5714285714% {
-    clip: rect(130px, 9999px, 151px, 0);
+    clip: rect(146px, 9999px, 273px, 0);
   }
   137.1428571429% {
-    clip: rect(189px, 9999px, 101px, 0);
+    clip: rect(97px, 9999px, 80px, 0);
   }
   145.7142857143% {
-    clip: rect(46px, 9999px, 37px, 0);
+    clip: rect(97px, 9999px, 166px, 0);
   }
   154.2857142857% {
-    clip: rect(178px, 9999px, 105px, 0);
+    clip: rect(21px, 9999px, 257px, 0);
   }
   162.8571428571% {
-    clip: rect(194px, 9999px, 36px, 0);
+    clip: rect(177px, 9999px, 247px, 0);
   }
   171.4285714286% {
-    clip: rect(4px, 9999px, 113px, 0);
+    clip: rect(185px, 9999px, 82px, 0);
   }
   180% {
-    clip: rect(28px, 9999px, 247px, 0);
+    clip: rect(160px, 9999px, 106px, 0);
   }
   188.5714285714% {
-    clip: rect(52px, 9999px, 209px, 0);
+    clip: rect(51px, 9999px, 163px, 0);
   }
   197.1428571429% {
-    clip: rect(71px, 9999px, 92px, 0);
+    clip: rect(41px, 9999px, 290px, 0);
   }
   205.7142857143% {
-    clip: rect(53px, 9999px, 213px, 0);
+    clip: rect(104px, 9999px, 104px, 0);
   }
   214.2857142857% {
-    clip: rect(78px, 9999px, 195px, 0);
+    clip: rect(142px, 9999px, 10px, 0);
   }
   222.8571428571% {
-    clip: rect(28px, 9999px, 39px, 0);
+    clip: rect(41px, 9999px, 74px, 0);
   }
   231.4285714286% {
-    clip: rect(25px, 9999px, 49px, 0);
+    clip: rect(146px, 9999px, 118px, 0);
   }
   240% {
-    clip: rect(10px, 9999px, 182px, 0);
+    clip: rect(72px, 9999px, 153px, 0);
   }
   248.5714285714% {
-    clip: rect(38px, 9999px, 263px, 0);
+    clip: rect(171px, 9999px, 37px, 0);
   }
   257.1428571429% {
-    clip: rect(176px, 9999px, 285px, 0);
+    clip: rect(54px, 9999px, 126px, 0);
   }
   265.7142857143% {
-    clip: rect(102px, 9999px, 128px, 0);
+    clip: rect(190px, 9999px, 32px, 0);
   }
   274.2857142857% {
-    clip: rect(71px, 9999px, 132px, 0);
+    clip: rect(61px, 9999px, 244px, 0);
   }
   282.8571428571% {
-    clip: rect(36px, 9999px, 99px, 0);
+    clip: rect(31px, 9999px, 78px, 0);
   }
   291.4285714286% {
-    clip: rect(185px, 9999px, 227px, 0);
+    clip: rect(170px, 9999px, 133px, 0);
   }
   300% {
-    clip: rect(110px, 9999px, 103px, 0);
+    clip: rect(33px, 9999px, 239px, 0);
   }
 }
 #intro-wrapper .intro-content .intro-body .startBtn:after {
@@ -380,9 +386,10 @@ body {
 }
 #intro-wrapper .intro-content .landing-content .landing-left {
   margin-top: -50px;
-  margin-left: 100px;
+  margin-left: 300px;
   color: #fff;
   width: 70%;
+  transform: scale(1.1);
 }
 #intro-wrapper .intro-content .landing-content .landing-left #randomWord {
   color: #f4cd41;
@@ -398,7 +405,7 @@ body {
   font-weight: 500;
 }
 #intro-wrapper .intro-content .landing-content .landing-left p {
-  width: 85%;
+  width: 70%;
   max-width: 900px;
   margin-top: 30px;
   font-size: 1.5rem;

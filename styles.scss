@@ -4,10 +4,12 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 
 $font-stack: 'Roboto', sans-serif;
 $secondary-font-stack: 'Archivo', sans-serif;
 $classic-font-stack: 'Playfair Display', serif;
+$logo-font-stack: 'Righteous', cursive;
 $primary-color: #333;
 $secondary-color: #bbb;
 $white: #fff;
@@ -31,17 +33,23 @@ body {
   .hamburger{
     position:fixed;
     z-index:99;
-    left: 4%;
+    right: 4%;
     top: 60px;
     cursor:pointer;
     opacity:0;
   }
   .navContactIcons{
+    font-family:$logo-font-stack;
+    font-size:126.2843px;
+    letter-spacing: -9px;
     position:fixed;
     z-index:2;
-    right:4%;
-    top:60px;
-    opacity:0;
+    left:4%;
+    top:40px;
+    // opacity:0;
+    #mainLogo{
+      opacity:0;
+    }
     a{
       padding:0 15px;
     }
@@ -210,10 +218,11 @@ body {
       // margin-left:-300px;
       .landing-left{
         margin-top:-50px;
-        margin-left:100px;
+        margin-left:300px;
         color:$white;
         width:70%;
         // background:red;
+        transform:scale(1.1);
         #randomWord{
           color:#f4cd41;
         }
@@ -228,7 +237,7 @@ body {
           font-weight:500;
         }
         p{
-          width:85%;
+          width:70%;
           max-width:900px;
           margin-top:30px;
           font-size:1.5rem;
@@ -238,6 +247,7 @@ body {
         }
       }
       .landing-down{
+        // margin-left:-100px;
         position:absolute;
         bottom:10%;
         width:50px;
