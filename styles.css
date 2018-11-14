@@ -147,207 +147,207 @@ body {
 }
 @keyframes noise-anim {
   0% {
-    clip: rect(87px, 9999px, 67px, 0);
+    clip: rect(82px, 9999px, 3px, 0);
   }
   3.3333333333% {
-    clip: rect(85px, 9999px, 89px, 0);
+    clip: rect(69px, 9999px, 41px, 0);
   }
   6.6666666667% {
-    clip: rect(87px, 9999px, 94px, 0);
+    clip: rect(36px, 9999px, 12px, 0);
   }
   10% {
-    clip: rect(41px, 9999px, 50px, 0);
+    clip: rect(33px, 9999px, 39px, 0);
   }
   13.3333333333% {
-    clip: rect(73px, 9999px, 64px, 0);
+    clip: rect(93px, 9999px, 63px, 0);
   }
   16.6666666667% {
-    clip: rect(26px, 9999px, 21px, 0);
+    clip: rect(89px, 9999px, 60px, 0);
   }
   20% {
-    clip: rect(10px, 9999px, 57px, 0);
+    clip: rect(98px, 9999px, 38px, 0);
   }
   23.3333333333% {
-    clip: rect(7px, 9999px, 84px, 0);
+    clip: rect(61px, 9999px, 69px, 0);
   }
   26.6666666667% {
-    clip: rect(8px, 9999px, 17px, 0);
+    clip: rect(69px, 9999px, 61px, 0);
   }
   30% {
-    clip: rect(75px, 9999px, 90px, 0);
+    clip: rect(36px, 9999px, 24px, 0);
   }
   33.3333333333% {
-    clip: rect(68px, 9999px, 98px, 0);
+    clip: rect(10px, 9999px, 46px, 0);
   }
   36.6666666667% {
-    clip: rect(74px, 9999px, 32px, 0);
+    clip: rect(52px, 9999px, 29px, 0);
   }
   40% {
-    clip: rect(73px, 9999px, 45px, 0);
+    clip: rect(8px, 9999px, 95px, 0);
   }
   43.3333333333% {
-    clip: rect(57px, 9999px, 87px, 0);
+    clip: rect(36px, 9999px, 54px, 0);
   }
   46.6666666667% {
-    clip: rect(8px, 9999px, 93px, 0);
+    clip: rect(4px, 9999px, 25px, 0);
   }
   50% {
-    clip: rect(83px, 9999px, 80px, 0);
+    clip: rect(30px, 9999px, 43px, 0);
   }
   53.3333333333% {
-    clip: rect(62px, 9999px, 36px, 0);
+    clip: rect(32px, 9999px, 12px, 0);
   }
   56.6666666667% {
-    clip: rect(46px, 9999px, 63px, 0);
+    clip: rect(89px, 9999px, 24px, 0);
   }
   60% {
-    clip: rect(46px, 9999px, 16px, 0);
+    clip: rect(45px, 9999px, 84px, 0);
   }
   63.3333333333% {
-    clip: rect(33px, 9999px, 1px, 0);
+    clip: rect(70px, 9999px, 86px, 0);
   }
   66.6666666667% {
-    clip: rect(42px, 9999px, 62px, 0);
+    clip: rect(10px, 9999px, 51px, 0);
   }
   70% {
-    clip: rect(67px, 9999px, 85px, 0);
+    clip: rect(31px, 9999px, 17px, 0);
   }
   73.3333333333% {
-    clip: rect(3px, 9999px, 84px, 0);
+    clip: rect(46px, 9999px, 3px, 0);
   }
   76.6666666667% {
-    clip: rect(33px, 9999px, 34px, 0);
+    clip: rect(33px, 9999px, 82px, 0);
   }
   80% {
-    clip: rect(100px, 9999px, 18px, 0);
+    clip: rect(62px, 9999px, 52px, 0);
   }
   83.3333333333% {
-    clip: rect(53px, 9999px, 64px, 0);
+    clip: rect(58px, 9999px, 3px, 0);
   }
   86.6666666667% {
-    clip: rect(34px, 9999px, 90px, 0);
+    clip: rect(84px, 9999px, 1px, 0);
   }
   90% {
-    clip: rect(95px, 9999px, 10px, 0);
+    clip: rect(38px, 9999px, 4px, 0);
   }
   93.3333333333% {
-    clip: rect(30px, 9999px, 48px, 0);
+    clip: rect(88px, 9999px, 23px, 0);
   }
   96.6666666667% {
-    clip: rect(24px, 9999px, 50px, 0);
+    clip: rect(12px, 9999px, 94px, 0);
   }
   100% {
-    clip: rect(76px, 9999px, 44px, 0);
+    clip: rect(47px, 9999px, 19px, 0);
   }
 }
 @keyframes noise-anim2 {
   0% {
-    clip: rect(71px, 9999px, 287px, 0);
+    clip: rect(36px, 9999px, 139px, 0);
   }
   8.5714285714% {
-    clip: rect(78px, 9999px, 160px, 0);
+    clip: rect(76px, 9999px, 239px, 0);
   }
   17.1428571429% {
-    clip: rect(27px, 9999px, 145px, 0);
+    clip: rect(132px, 9999px, 104px, 0);
   }
   25.7142857143% {
-    clip: rect(35px, 9999px, 154px, 0);
+    clip: rect(171px, 9999px, 281px, 0);
   }
   34.2857142857% {
-    clip: rect(28px, 9999px, 194px, 0);
+    clip: rect(149px, 9999px, 144px, 0);
   }
   42.8571428571% {
-    clip: rect(172px, 9999px, 160px, 0);
+    clip: rect(148px, 9999px, 38px, 0);
   }
   51.4285714286% {
-    clip: rect(67px, 9999px, 182px, 0);
+    clip: rect(189px, 9999px, 200px, 0);
   }
   60% {
-    clip: rect(35px, 9999px, 82px, 0);
+    clip: rect(81px, 9999px, 224px, 0);
   }
   68.5714285714% {
-    clip: rect(191px, 9999px, 294px, 0);
+    clip: rect(159px, 9999px, 113px, 0);
   }
   77.1428571429% {
-    clip: rect(179px, 9999px, 287px, 0);
+    clip: rect(169px, 9999px, 58px, 0);
   }
   85.7142857143% {
-    clip: rect(98px, 9999px, 236px, 0);
+    clip: rect(130px, 9999px, 10px, 0);
   }
   94.2857142857% {
-    clip: rect(24px, 9999px, 174px, 0);
+    clip: rect(9px, 9999px, 277px, 0);
   }
   102.8571428571% {
-    clip: rect(131px, 9999px, 292px, 0);
+    clip: rect(126px, 9999px, 4px, 0);
   }
   111.4285714286% {
-    clip: rect(77px, 9999px, 183px, 0);
+    clip: rect(147px, 9999px, 197px, 0);
   }
   120% {
-    clip: rect(49px, 9999px, 227px, 0);
+    clip: rect(172px, 9999px, 188px, 0);
   }
   128.5714285714% {
-    clip: rect(8px, 9999px, 237px, 0);
+    clip: rect(37px, 9999px, 162px, 0);
   }
   137.1428571429% {
-    clip: rect(170px, 9999px, 81px, 0);
+    clip: rect(199px, 9999px, 162px, 0);
   }
   145.7142857143% {
-    clip: rect(55px, 9999px, 262px, 0);
+    clip: rect(35px, 9999px, 67px, 0);
   }
   154.2857142857% {
-    clip: rect(133px, 9999px, 210px, 0);
+    clip: rect(11px, 9999px, 211px, 0);
   }
   162.8571428571% {
-    clip: rect(69px, 9999px, 159px, 0);
+    clip: rect(122px, 9999px, 277px, 0);
   }
   171.4285714286% {
-    clip: rect(175px, 9999px, 29px, 0);
+    clip: rect(115px, 9999px, 245px, 0);
   }
   180% {
-    clip: rect(40px, 9999px, 252px, 0);
+    clip: rect(86px, 9999px, 272px, 0);
   }
   188.5714285714% {
-    clip: rect(102px, 9999px, 294px, 0);
+    clip: rect(35px, 9999px, 55px, 0);
   }
   197.1428571429% {
-    clip: rect(154px, 9999px, 79px, 0);
+    clip: rect(25px, 9999px, 200px, 0);
   }
   205.7142857143% {
-    clip: rect(178px, 9999px, 247px, 0);
+    clip: rect(112px, 9999px, 59px, 0);
   }
   214.2857142857% {
-    clip: rect(188px, 9999px, 217px, 0);
+    clip: rect(29px, 9999px, 220px, 0);
   }
   222.8571428571% {
-    clip: rect(142px, 9999px, 67px, 0);
+    clip: rect(27px, 9999px, 297px, 0);
   }
   231.4285714286% {
-    clip: rect(105px, 9999px, 104px, 0);
+    clip: rect(99px, 9999px, 233px, 0);
   }
   240% {
-    clip: rect(166px, 9999px, 85px, 0);
+    clip: rect(199px, 9999px, 271px, 0);
   }
   248.5714285714% {
-    clip: rect(186px, 9999px, 76px, 0);
+    clip: rect(4px, 9999px, 287px, 0);
   }
   257.1428571429% {
-    clip: rect(17px, 9999px, 177px, 0);
+    clip: rect(117px, 9999px, 146px, 0);
   }
   265.7142857143% {
-    clip: rect(65px, 9999px, 28px, 0);
+    clip: rect(170px, 9999px, 288px, 0);
   }
   274.2857142857% {
-    clip: rect(100px, 9999px, 84px, 0);
+    clip: rect(65px, 9999px, 249px, 0);
   }
   282.8571428571% {
-    clip: rect(95px, 9999px, 207px, 0);
+    clip: rect(21px, 9999px, 219px, 0);
   }
   291.4285714286% {
-    clip: rect(68px, 9999px, 194px, 0);
+    clip: rect(96px, 9999px, 63px, 0);
   }
   300% {
-    clip: rect(162px, 9999px, 63px, 0);
+    clip: rect(10px, 9999px, 187px, 0);
   }
 }
 #intro-wrapper .intro-content .intro-body .startBtn:after {
@@ -694,18 +694,151 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 #contact-wrapper #contact-work {
-  width: 50%;
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #contact-wrapper #contact-work #contact-box {
+  position: absolute;
+  width: 0px;
   height: 200px;
   background: #000;
   color: #fff;
   font-size: 6em;
+  opacity: 0;
+  z-index: 4;
+}
+#contact-wrapper #contact-work #contact-box p {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 600px;
+  height: 200px;
+}
+#contact-wrapper #contact-work #contact-form {
+  margin-top: 200px;
+  /* LABEL ======================================= */
+  /* active state */
+  /* BOTTOM BARS ================================= */
+  /* active state */
+  /* HIGHLIGHTER ================================== */
+  /* active state */
+  /* ANIMATIONS ================ */
+}
+#contact-wrapper #contact-work #contact-form .group {
+  position: relative;
+  margin-bottom: 45px;
+  opacity: 0;
+}
+#contact-wrapper #contact-work #contact-form input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+#contact-wrapper #contact-work #contact-form input:focus, #contact-wrapper #contact-work #contact-form textarea:focus {
+  outline: none;
+}
+#contact-wrapper #contact-work #contact-form textarea {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #757575;
+  resize: none;
+}
+#contact-wrapper #contact-work #contact-form label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#contact-wrapper #contact-work #contact-form input:focus ~ label, #contact-wrapper #contact-work #contact-form input:valid ~ label, #contact-wrapper #contact-work #contact-form textarea:focus ~ label, #contact-wrapper #contact-work #contact-form textarea:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+#contact-wrapper #contact-work #contact-form .bar {
+  position: relative;
+  display: block;
+  width: 515px;
+}
+#contact-wrapper #contact-work #contact-form .bar:before, #contact-wrapper #contact-work #contact-form .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#contact-wrapper #contact-work #contact-form .bar:before {
+  left: 50%;
+}
+#contact-wrapper #contact-work #contact-form .bar:after {
+  right: 50%;
+}
+#contact-wrapper #contact-work #contact-form input:focus ~ .bar:before, #contact-wrapper #contact-work #contact-form input:focus ~ .bar:after, #contact-wrapper #contact-work #contact-form textarea:focus ~ .bar:before, #contact-wrapper #contact-work #contact-form textarea:focus ~ .bar:after {
+  width: 50%;
+}
+#contact-wrapper #contact-work #contact-form .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#contact-wrapper #contact-work #contact-form input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

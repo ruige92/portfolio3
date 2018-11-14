@@ -232,12 +232,6 @@ const pageSlideControl=()=>{
             translateY:-20,
             easing:'linear'
           })
-          // anime({
-          //   targets:'#landing-wrapper',
-          //   duration:200,
-          //   scale:1.1,
-          //   easing:'linear',
-          // })
         })
         .on("leave", function () {
           //Change theme to black
@@ -247,14 +241,35 @@ const pageSlideControl=()=>{
             translateY:0,
             easing:'linear'
           })
-          // anime({
-          //   targets:'#landing-wrapper',
-          //   duration:200,
-          //   scale:1,
-          //   easing:'linear',
-          // })
         })
         .addIndicators({name: "0 - Inital section"}) // add indicators (requires plugin)
+        .addTo(controller);
+  var scene4 = new ScrollMagic.Scene({triggerElement: "#contact-wrapper"})
+        .on("enter", function () {
+          //Change theme to white
+          contactTitleShow();
+
+          $('#contact-box').on('mouseenter',function(){
+            let timeline = anime.timeline();
+            timeline
+            .add({
+              targets:'#contact-box',
+              translateY:-300,
+              scale:0.5
+            })
+            .add({
+              targets:'#contact-box p',
+              update:function(){
+                $('#contact-box p').text("Let's Talk!")
+              }
+            })
+            $('#contact-form .group').addClass('animated fadeInUp');
+          })
+        })
+        .on("leave", function () {
+          //Change theme to black
+        })
+        .addIndicators({name: "4 - Contact section"}) // add indicators (requires plugin)
         .addTo(controller);
 }
 
@@ -967,6 +982,29 @@ $('.skill-back-btn').on('click',function(){
     // $('#desList').fadeOut();
   }
 })
+
+const contactTitleShow=()=>{
+  anime({
+    targets:'#contact-box',
+    width:'600px',
+    easing:'linear',
+    duration:600,
+    opacity:1
+  })
+}
+
+const contactTitleHide=()=>{
+  anime({
+    targets:['#contact-box','#contact-form'],
+    width:['600px','0px'],
+    easing:'linear',
+    duration:600,
+    opacity:[1,0],
+  })
+}
+
+
+
 
 
 //Global previous color variable for the nav hamburger icon
