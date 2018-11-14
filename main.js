@@ -1071,6 +1071,10 @@ const navMenuControl=()=>{
  })
 }
 
+const test=()=>{
+  $('#successMsg').text('Thanks for your email!')
+}
+
 //Main method
 const main =()=>{
   //scroll control
