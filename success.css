@@ -123,10 +123,10 @@ body {
   line-height: 1.2em;
   padding: 10px 0;
 }
-#contact-wrapper #contact-work svg {
+#contact-wrapper #contact-work #backBtn {
   position: absolute;
   right: 20px;
-  bottom: 150px;
+  bottom: 160px;
 }
 
 /*# sourceMappingURL=success.css.map */

@@ -3,18 +3,19 @@
 const introAnime=()=>{
   let timeLine = anime.timeline();
   timeLine
-    .add({
-      targets:'.intro-bg',
-      translateX:2200,
-      easing:'easeOutExpo',
-      duration:2000
-    })
+    // .add({
+    //   targets:'.intro-bg',
+    //   translateX:2200,
+    //   easing:'easeOutExpo',
+    //   duration:2000
+    // })
     .add({
       targets:['.hamburger','#menuIcon line','#mainLogo'],
       fill: '#fff',
       opacity:1,
       stroke: '#fff',
       delay:500,
+      easing:'linear'
     })
 
 }
@@ -1099,10 +1100,11 @@ const main =()=>{
    dragSlider();
    //Adding animations to the intro content
    $('.landing-left .isAnimated').addClass('fadeIn');
-   $('.landing-left .isAnimated').eq(0).css('animation-delay','1s');
-   $('.landing-left .isAnimated').eq(1).css('animation-delay','1.2s');
-   $('.landing-left .isAnimated').eq(2).css('animation-delay','1.4s');
-   $('.landing-left .isAnimated').eq(3).css('animation-delay','1.6s');
+   $('.landing-left').css({opacity:1});
+   $('.landing-left .isAnimated').eq(0).css('animation-delay','2s');
+   $('.landing-left .isAnimated').eq(1).css('animation-delay','2.2s');
+   $('.landing-left .isAnimated').eq(2).css('animation-delay','2.4s');
+   $('.landing-left .isAnimated').eq(3).css('animation-delay','2.6s');
    $('.landing-down').addClass('fadeInUp');
    $('.landing-down').css('animation-delay','3s');
 

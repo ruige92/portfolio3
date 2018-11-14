@@ -1,4 +1,21 @@
-
+$('#backBtn').on('mouseenter',function(){
+  $('#backBtn').removeClass('animated fadeInUp delay-1-3s');
+  anime({
+    targets:'#backBtn',
+    translateY:-5,
+    scale:1.1,
+    duration:200,
+    ease:'linear'
+  })
+}).on('mouseleave',function(){
+  anime({
+    targets:'#backBtn',
+    translateY:0,
+    scale:1,
+    duration:50,
+    ease:'linear'
+  })
+})
 
 $('.navContactIcons').on('mouseenter',function(){
   logoFocus();
