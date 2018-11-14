@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+// @import url('https://fonts.googleapis.com/css?family=Archivo:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
+$font-stack: 'Roboto', sans-serif;
+$secondary-font-stack: 'Archivo', sans-serif;
+$classic-font-stack: 'Playfair Display', serif;
+$logo-font-stack: 'Righteous', cursive;
+$primary-color: #333;
+$secondary-color: #bbb;
+$white: #fff;
+$black: #000;
+$darkgrey: #555;
+
+*{
+  padding:0;
+  margin:0;
+}
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+.overflowHidden{
+  overflow:hidden;
+}
+.ScrollSceneIndicators { z-index: 9999999 !important; }
+.sidebar{
+  position:relative;
+  .hamburger{
+    position:fixed;
+    z-index:99;
+    right: 4%;
+    top: 60px;
+    cursor:pointer;
+    opacity:0;
+  }
+  .navContactIcons{
+    font-family:$logo-font-stack;
+    font-size:126.2843px;
+    letter-spacing: -9px;
+    position:fixed;
+    z-index:2;
+    left:4%;
+    top:40px;
+    // opacity:0;
+    #mainLogo{
+      opacity:0;
+    }
+    a{
+      padding:0 15px;
+    }
+  }
+  // animation for sliding menu
+  .slideLeft{
+    width:105%;
+    // min-width:80px;
+    transform:translateX(0);
+  }
+  nav{
+    font-family:$secondary-font-stack;
+    width:100%;
+    height:100vh;
+    background:$white;
+    position:fixed;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow:hidden;
+    z-index:-1;
+    opacity:0;
+    // animation for menu items
+    a{
+      margin:20px 0px;
+      // margin-left:400px;
+      text-align: center;
+      text-decoration:none;
+      font-size:3em;
+      font-weight:600;
+      color:$secondary-color;
+      // margin-left:-50px;
+      -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contactIcons{
+      grid-column-start: 1/2;
+      grid-column-end: 3;
+      // background:red;
+      display:flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding:20px;
+      a{
+        margin-left:150px;
+      }
+    }
+    svg{
+      margin-left:-150px;
+      -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+}
+// End of side-bar
+
+#contact-wrapper{
+  width:100%;
+  height:100vh;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+  // background:red;
+  #contact-work{
+    width:50%;
+    height:100vh;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    // align-items: center;
+    // background:red;
+    flex-direction: column;
+    h1{
+      margin-top:-200px;
+      font-size: 4em;
+      padding:0 20px 20px 20px;
+    }
+    p{
+      font-size: 2em;
+      line-height: 1.2em;
+      padding:10px 0;
+    }
+    svg{
+      position:absolute;
+      right:20px;
+      bottom:150px;
+    }
+  }
+}

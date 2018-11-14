@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 100% "Roboto", sans-serif;
+  color: #333;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.ScrollSceneIndicators {
+  z-index: 9999999 !important;
+}
+
+.sidebar {
+  position: relative;
+}
+.sidebar .hamburger {
+  position: fixed;
+  z-index: 99;
+  right: 4%;
+  top: 60px;
+  cursor: pointer;
+  opacity: 0;
+}
+.sidebar .navContactIcons {
+  font-family: "Righteous", cursive;
+  font-size: 126.2843px;
+  letter-spacing: -9px;
+  position: fixed;
+  z-index: 2;
+  left: 4%;
+  top: 40px;
+}
+.sidebar .navContactIcons #mainLogo {
+  opacity: 0;
+}
+.sidebar .navContactIcons a {
+  padding: 0 15px;
+}
+.sidebar .slideLeft {
+  width: 105%;
+  transform: translateX(0);
+}
+.sidebar nav {
+  font-family: "Archivo", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+}
+.sidebar nav a {
+  margin: 20px 0px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: 600;
+  color: #bbb;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar nav .contactIcons {
+  grid-column-start: 1/2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+}
+.sidebar nav .contactIcons a {
+  margin-left: 150px;
+}
+.sidebar nav svg {
+  margin-left: -150px;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#contact-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#contact-wrapper #contact-work {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#contact-wrapper #contact-work h1 {
+  margin-top: -200px;
+  font-size: 4em;
+  padding: 0 20px 20px 20px;
+}
+#contact-wrapper #contact-work p {
+  font-size: 2em;
+  line-height: 1.2em;
+  padding: 10px 0;
+}
+#contact-wrapper #contact-work svg {
+  position: absolute;
+  right: 20px;
+  bottom: 150px;
+}
+
+/*# sourceMappingURL=success.css.map */

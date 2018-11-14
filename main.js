@@ -1003,10 +1003,6 @@ const contactTitleHide=()=>{
   })
 }
 
-
-
-
-
 //Global previous color variable for the nav hamburger icon
 let previousIconColor = $('#m-line1').css('stroke');
 const navMenuControl=()=>{
