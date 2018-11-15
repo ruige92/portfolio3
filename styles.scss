@@ -315,9 +315,11 @@ body {
         transform:scale(1.1);
         opacity:0;
         @include phone{
-          margin-top:-100px;
+          margin-top:200px;
           margin-left:100px;
           line-height:140px;
+
+          // display:none;
         }
         #randomWord{
           color:#f4cd41;
@@ -325,6 +327,7 @@ body {
             width:100%;
             height:130px;
             font-size:9em;
+            font-weight:700;
           }
         }
         h1{
@@ -334,6 +337,7 @@ body {
           @include phone{
             font-size:7em;
             line-height:100px;
+            font-weight:700;
           }
         }
         h2{
@@ -342,6 +346,7 @@ body {
           font-weight:500;
           @include phone{
             font-size:5em;
+            font-weight:700;
           }
         }
         p{
@@ -353,11 +358,11 @@ body {
           line-height:2rem;
           color:$secondary-color;
           @include phone{
-            margin-top:150px;
+            // margin-top:150px;
             max-width:100%;
             width:90%;
-            font-size:3em;
-            word-spacing:0.2em;
+            font-size:2em;
+            // word-spacing:0.2em;
             line-height:3rem;
             font-weight:300;
             text-align: justify;
@@ -377,6 +382,7 @@ body {
         // justify-content:center;
         svg{
           @include phone{
+            margin-top:-150px;
             width:100px;
             height:100px;
           }
