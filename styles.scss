@@ -422,6 +422,7 @@ body {
     @include phone{
       left: 55%;
       top: 40%;
+      // display:none;
     }
     // background:pink;
     .handle {
@@ -512,6 +513,7 @@ body {
       font-size: 3em;
       right: 10%;
       bottom: 10%;
+      // display:none;
     }
     .value{
       font-family: $secondary-font-stack;

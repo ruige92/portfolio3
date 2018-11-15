@@ -1,3 +1,9 @@
+// 1. Import the functions
+const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+const targetElement = $('.sidebar nav');
+
+
 
 //Intro animation after ENTER is clicked.
 const introAnime=()=>{
@@ -1109,6 +1115,8 @@ const navMenuControl=()=>{
   })
 
   $('.hamburger').on('click',function(){
+    //mobile disable scroll
+    disableBodyScroll(targetElement);
     //animations for each of the nav items
     $('nav a').addClass('animated slideInUp');
     $('.contactIcons a').addClass('animated slideInUp delay-05s');
@@ -1118,6 +1126,8 @@ const navMenuControl=()=>{
    $('body').addClass('overflowHidden');
    //IF menu ISOPEN(closeBurger class), then do the following
    if($('.hamburger').hasClass('closeBurger')){
+     // mobile enable scroll...
+     enableBodyScroll(targetElement);
      //remove animations for each of the nav items
      $('nav a').removeClass('animated slideInUp');
      $('.contactIcons a').removeClass('animated slideInUp delay-05s');
