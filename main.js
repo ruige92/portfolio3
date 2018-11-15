@@ -184,18 +184,18 @@ const pageSlideControl=()=>{
             // landingContentOut();
             blackBurger();
           })
-          .addIndicators({name: "1 - enter Exp Section"}) // add indicators (requires plugin)
+          // .addIndicators({name: "1 - enter Exp Section"}) // add indicators (requires plugin)
           .addTo(controller);
 
   var scene2 = new ScrollMagic.Scene({triggerElement: "#skills-wrapper", duration: '100%'})
           .on("enter", function () {
             //Change theme to white
-            sliderImageSectionHide();
+            // sliderImageSectionHide();
             //
-            $('#skills-wrapper').removeClass('fadeOut');
-            $('#box1').removeClass('fadeOutLeft');
-            $('#box2').removeClass('fadeOutDown');
-            $('#box3').removeClass('fadeOutRight');
+            // $('#skills-wrapper').removeClass('fadeOut');
+            // $('#box1').removeClass('fadeOutLeft');
+            // $('#box2').removeClass('fadeOutDown');
+            // $('#box3').removeClass('fadeOutRight');
             //
             $('#skills-wrapper').addClass('animated fadeIn');
             $('#box1').addClass('animated fadeInLeft');
@@ -207,19 +207,19 @@ const pageSlideControl=()=>{
           })
           .on("leave", function () {
             //Change theme to black
-            sliderImageSectionShow();
+            // sliderImageSectionShow();
 
-            $('#skills-wrapper').removeClass('fadeIn');
-            $('#box1').removeClass('fadeInLeft');
-            $('#box2').removeClass('fadeInUp');
-            $('#box3').removeClass('fadeInRight');
+            // $('#skills-wrapper').removeClass('fadeIn');
+            // $('#box1').removeClass('fadeInLeft');
+            // $('#box2').removeClass('fadeInUp');
+            // $('#box3').removeClass('fadeInRight');
             //
-            $('#skills-wrapper').addClass('fadeOut');
-            $('#box1').addClass('fadeOutLeft');
-            $('#box2').addClass('fadeOutDown');
-            $('#box3').addClass('fadeOutRight');
+            // $('#skills-wrapper').addClass('fadeOut');
+            // $('#box1').addClass('fadeOutLeft');
+            // $('#box2').addClass('fadeOutDown');
+            // $('#box3').addClass('fadeOutRight');
           })
-          .addIndicators({name: "2 - enter Skill Section"}) // add indicators (requires plugin)
+          // .addIndicators({name: "2 - enter Skill Section"}) // add indicators (requires plugin)
           .addTo(controller);
 
   var scene3 = new ScrollMagic.Scene({triggerElement: "#landing-about"})
@@ -245,7 +245,7 @@ const pageSlideControl=()=>{
             easing:'linear'
           })
         })
-        .addIndicators({name: "0 - Inital section"}) // add indicators (requires plugin)
+        // .addIndicators({name: "0 - Inital section"}) // add indicators (requires plugin)
         .addTo(controller);
   var scene4 = new ScrollMagic.Scene({triggerElement: "#contact-wrapper"})
         .on("enter", function () {
@@ -289,9 +289,169 @@ const pageSlideControl=()=>{
         .on("leave", function () {
           //Change theme to black
         })
-        .addIndicators({name: "4 - Contact section"}) // add indicators (requires plugin)
+        // .addIndicators({name: "4 - Contact section"}) // add indicators (requires plugin)
         .addTo(controller);
+    //Mobile exp section
+    var scene5 = new ScrollMagic.Scene({triggerElement: "#first-exp", duration: '100%'})
+          .on("enter", function () {
+            //Change theme to white
+            if($('#first-exp').hasClass('fadeInLeft')){
+              return;
+            }else{
+              $('#first-exp').addClass('animated fadeInUp delay-0-5s');
+            }
+
+          })
+          .on("leave", function () {
+            //Change theme to black
+          })
+          // .addIndicators({name: "2 - Enter Cisco"}) // add indicators (requires plugin)
+          .addTo(controller);
+    var scene6 = new ScrollMagic.Scene({triggerElement: "#second-exp", duration: '100%'})
+          .on("enter", function () {
+            //Change theme to white
+            if($('#second-exp').hasClass('fadeInLeft')){
+              return;
+            }else{
+              $('#second-exp').addClass('animated fadeInUp delay-0-5s');
+            }
+          })
+          .on("leave", function () {
+            //Change theme to black
+          })
+          // .addIndicators({name: "3 - Enter Kent"}) // add indicators (requires plugin)
+          .addTo(controller);
+    var scene7 = new ScrollMagic.Scene({triggerElement: "#third-exp", duration: '100%'})
+          .on("enter", function () {
+            //Change theme to white
+            if($('#third-exp').hasClass('fadeInLeft')){
+              return;
+            }else{
+              $('#third-exp').addClass('animated fadeInUp delay-0-5s');
+            }
+          })
+          .on("leave", function () {
+            //Change theme to black
+          })
+          // .addIndicators({name: "4 - Enter Riot"}) // add indicators (requires plugin)
+          .addTo(controller);
+    var scene8 = new ScrollMagic.Scene({triggerElement: "#fourth-exp", duration: '100%'})
+          .on("enter", function () {
+            //Change theme to white
+            if($('#fourth-exp').hasClass('fadeInLeft')){
+              return;
+            }else{
+              $('#fourth-exp').addClass('animated fadeInUp delay-0-5s');
+            }
+          })
+          .on("leave", function () {
+            //Change theme to black
+          })
+          // .addIndicators({name: "5 - Enter GGP"}) // add indicators (requires plugin)
+          .addTo(controller);
 }
+
+//mobile exp readmore
+$('#cisco-modal').on('click',function(){
+  $('.hamburger').fadeOut();
+  $('#mobileLogo').fadeOut();
+  $('#first-exp').removeClass('animated fadeInUp fadeInLeft delay-0-5s');
+  anime({
+    targets:'#first-exp-modal',
+    translateX:['100%',0],
+    opacity:1,
+    duration:300,
+    easing:'easeInExpo'
+  })
+})
+
+$('#kent-modal').on('click',function(){
+  $('.hamburger').fadeOut();
+  $('#mobileLogo').fadeOut();
+  $('#second-exp').removeClass('animated fadeInUp fadeInLeft delay-0-5s');
+  anime({
+    targets:'#second-exp-modal',
+    translateX:['100%',0],
+    opacity:1,
+    duration:300,
+    easing:'easeInExpo'
+  })
+})
+
+$('#riot-modal').on('click',function(){
+  $('.hamburger').fadeOut();
+  $('#mobileLogo').fadeOut();
+  $('#third-exp').removeClass('animated fadeInUp fadeInLeft delay-0-5s');
+  anime({
+    targets:'#third-exp-modal',
+    translateX:['100%',0],
+    opacity:1,
+    duration:300,
+    easing:'easeInExpo'
+  })
+})
+
+$('#ggp-modal').on('click',function(){
+  $('.hamburger').fadeOut();
+  $('#mobileLogo').fadeOut();
+  $('#fourth-exp').removeClass('animated fadeInUp fadeInLeft delay-0-5s');
+  anime({
+    targets:'#fourth-exp-modal',
+    translateX:['100%',0],
+    opacity:1,
+    duration:300,
+    easing:'easeInExpo'
+  })
+})
+
+$('.exp-modal-closeBtn').on('click',function(){
+  if($('#first-exp-modal').css('opacity')==1){
+    $('#first-exp').addClass('animated fadeInLeft delay-0-5s');
+    $('.hamburger').fadeIn();
+    $('#mobileLogo').fadeIn();
+    anime({
+      targets:'#first-exp-modal',
+      translateX:[0,'100%'],
+      opacity:0,
+      duration:300,
+      easing:'easeInExpo'
+    })
+    console.log('first modal detected!')
+  }else if($('#second-exp-modal').css('opacity')==1){
+    $('#second-exp').addClass('animated fadeInLeft delay-0-5s');
+    $('.hamburger').fadeIn();
+    $('#mobileLogo').fadeIn();
+    anime({
+      targets:'#second-exp-modal',
+      translateX:[0,'100%'],
+      opacity:0,
+      duration:300,
+      easing:'easeInExpo'
+    })
+  }else if($('#third-exp-modal').css('opacity')==1){
+    $('#third-exp').addClass('animated fadeInLeft delay-0-5s');
+    $('.hamburger').fadeIn();
+    $('#mobileLogo').fadeIn();
+    anime({
+      targets:'#third-exp-modal',
+      translateX:[0,'100%'],
+      opacity:0,
+      duration:300,
+      easing:'easeInExpo'
+    })
+  }else if($('#fourth-exp-modal').css('opacity')==1){
+    $('#fourth-exp').addClass('animated fadeInLeft delay-0-5s');
+    $('.hamburger').fadeIn();
+    $('#mobileLogo').fadeIn();
+    anime({
+      targets:'#fourth-exp-modal',
+      translateX:[0,'100%'],
+      opacity:0,
+      duration:300,
+      easing:'easeInExpo'
+    })
+  }
+})
 
 //Animation methods for slider
 const sliderImageSectionShow=()=>{
