@@ -60,6 +60,7 @@ $screen-xl-min: 1200px;
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  position:relative;
 }
 .overflowHidden{
   overflow:hidden;
