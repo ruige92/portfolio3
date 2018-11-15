@@ -1,7 +1,4 @@
-// 1. Import the functions
-const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-const targetElement = $('.sidebar nav');
+
 
 
 
@@ -604,6 +601,13 @@ const contentSlider=()=>{
 }
 
 const skillTitlesAnimation=(tag)=>{
+  // 1. Import the functions
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+  const techScrollElement = $('#techTitle');
+  const desScrollElement = $('#desTitle');
+  const proScrollElement = $('#proTitle');
+
   $(tag).each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
   });
@@ -622,6 +626,7 @@ const skillTitlesAnimation=(tag)=>{
 }
 
 $('#techTitle').on('click',function(){
+  disableBodyScroll(techScrollElement);
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
   $('#box3').removeClass('fadeInRight');
@@ -722,6 +727,7 @@ $('#techTitle').on('click',function(){
 })
 
 $('#desTitle').on('click',function(){
+  disableBodyScroll(desScrollElement);
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
   $('#box3').removeClass('fadeInRight');
@@ -822,6 +828,7 @@ $('#desTitle').on('click',function(){
 })
 
 $('#proTitle').on('click',function(){
+  disableBodyScroll(proScrollElement);
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
   $('#box3').removeClass('fadeInRight');
@@ -922,6 +929,7 @@ $('#proTitle').on('click',function(){
 
 $('.skill-back-btn').on('click',function(){
   if( $('.skill-titles').hasClass('techTitle') ){
+    enableBodyScroll(techScrollElement);
     // console.log('tech working');
     //enable scrolling on intro page
     $('body').removeClass('overflowHidden');
@@ -973,6 +981,7 @@ $('.skill-back-btn').on('click',function(){
     // $('#desList').fadeOut();
     // $('#proList').fadeOut();
   }else if ( $('.skill-titles').hasClass('desTitle') ){
+    enableBodyScroll(desScrollElement);
     // console.log('des working');
     //enable scrolling on intro page
     $('body').removeClass('overflowHidden');
@@ -1024,6 +1033,7 @@ $('.skill-back-btn').on('click',function(){
       $('#box1').fadeIn();
       $('#box3').fadeIn();
   }else if ( $('.skill-titles').hasClass('proTitle') ){
+    enableBodyScroll(proScrollElement);
     // console.log('pro working');
     //enable scrolling on intro page
     $('body').removeClass('overflowHidden');
@@ -1105,6 +1115,10 @@ const navMenuControl=()=>{
   //Method to grab the menuicon color before opening the nav menu
   //Important for when the background color changes,
   //to set the icon back to the opposite color
+  // 1. Import the functions
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+  const targetElement = $('.sidebar nav');
 
   $('.hamburger').on('mouseenter',function(){
     if(!$('.hamburger').hasClass('closeBurger')){
@@ -1115,6 +1129,7 @@ const navMenuControl=()=>{
   })
 
   $('.hamburger').on('click',function(){
+
     //mobile disable scroll
     disableBodyScroll(targetElement);
     //animations for each of the nav items
