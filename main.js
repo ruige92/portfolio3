@@ -601,13 +601,6 @@ const contentSlider=()=>{
 }
 
 const skillTitlesAnimation=(tag)=>{
-  // 1. Import the functions
-  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-  const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-  const techScrollElement = $('#techTitle');
-  const desScrollElement = $('#desTitle');
-  const proScrollElement = $('#proTitle');
-
   $(tag).each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
   });
@@ -626,6 +619,8 @@ const skillTitlesAnimation=(tag)=>{
 }
 
 $('#techTitle').on('click',function(){
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const techScrollElement = $('#techTitle');
   disableBodyScroll(techScrollElement);
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
@@ -727,6 +722,8 @@ $('#techTitle').on('click',function(){
 })
 
 $('#desTitle').on('click',function(){
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const desScrollElement = $('#desTitle');
   disableBodyScroll(desScrollElement);
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
@@ -828,6 +825,8 @@ $('#desTitle').on('click',function(){
 })
 
 $('#proTitle').on('click',function(){
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const proScrollElement = $('#proTitle');
   disableBodyScroll(proScrollElement);
   $('#box1').removeClass('fadeInLeft');
   $('#box2').removeClass('fadeInUp');
@@ -929,6 +928,8 @@ $('#proTitle').on('click',function(){
 
 $('.skill-back-btn').on('click',function(){
   if( $('.skill-titles').hasClass('techTitle') ){
+    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+    const techScrollElement = $('#techTitle');
     enableBodyScroll(techScrollElement);
     // console.log('tech working');
     //enable scrolling on intro page
@@ -981,6 +982,8 @@ $('.skill-back-btn').on('click',function(){
     // $('#desList').fadeOut();
     // $('#proList').fadeOut();
   }else if ( $('.skill-titles').hasClass('desTitle') ){
+    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+    const desScrollElement = $('#desTitle');
     enableBodyScroll(desScrollElement);
     // console.log('des working');
     //enable scrolling on intro page
@@ -1033,6 +1036,8 @@ $('.skill-back-btn').on('click',function(){
       $('#box1').fadeIn();
       $('#box3').fadeIn();
   }else if ( $('.skill-titles').hasClass('proTitle') ){
+    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+    const proScrollElement = $('#proTitle');
     enableBodyScroll(proScrollElement);
     // console.log('pro working');
     //enable scrolling on intro page
