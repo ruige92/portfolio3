@@ -1,25 +1,20 @@
 
 //Intro animation after ENTER is clicked.
 const introAnime=()=>{
-  let timeLine = anime.timeline();
-  timeLine
-    // .add({
-    //   targets:'.intro-bg',
-    //   translateX:2200,
-    //   easing:'easeOutExpo',
-    //   duration:2000
-    // })
-    .add({
-      targets:['.hamburger','#menuIcon line','#mainLogo'],
-      fill: '#fff',
-      opacity:1,
-      stroke: '#fff',
-      delay:500,
-      easing:'linear'
-    })
-
+  anime({
+    targets:['#menuIcon line','#mobilemainLogo'],
+    fill: '#fff',
+    opacity:1,
+    stroke: '#fff',
+    delay:500,
+    easing:'linear'
+  })
+  anime({
+    targets:'.navContactIcons svg',
+    fill:'#fff',
+    delay:2400
+  })
 }
-
 
 // let introWordChange
 //Animated SVG scroll down icon.
@@ -47,7 +42,7 @@ const randomColor=()=>{
 }
 //Random word generator
 const randomWord=()=>{
-  let words = ['JUNIOR', 'CREATIVE', 'HUNGRY', 'HAPPY', 'CURIOUS', 'ADVENTUROUS'];
+  let words = ['JUNIOR', 'CREATIVE', 'HUNGRY', 'HAPPY', 'CURIOUS', 'HUMBLE'];
   let word = words[Math.floor(Math.random()*words.length)];
   return word;
 }
@@ -76,7 +71,7 @@ const callShuffle=()=>{
 //Changing background to black, other items to white
 const whiteBurger=()=>{
   anime({
-    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#mainLogo'],
+    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#mainLogo', '#mobilemainLogo'],
     stroke: '#000',
     fill: '#000',
     delay: 300
@@ -85,7 +80,7 @@ const whiteBurger=()=>{
     targets:['#home-wrapper','.intro-content','#skills-wrapper'],
     backgroundColor:'#fff',
     duration:50,
-    easing:'easeOutQuint'
+    easing:'linear'
   })
 }
 //Changing background to white, other items to black
@@ -94,10 +89,10 @@ const blackBurger=()=>{
     targets:['#home-wrapper','.intro-content','#skills-wrapper'],
     backgroundColor:'#000',
     duration:50,
-    easing:'easeOutQuint'
+    easing:'linear'
   })
   anime({
-    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#mainLogo'],
+    targets: ['#menuIcon line','#scroll-icon #scroll-item','#scroll-icon #scroll-line','#mainLogo', '#mobilemainLogo'],
     stroke: '#fff',
     fill: '#fff',
     delay: 300
@@ -226,9 +221,13 @@ const pageSlideControl=()=>{
 
   var scene3 = new ScrollMagic.Scene({triggerElement: "#landing-about"})
         .on("enter", function () {
+          $('#mobileLogo').removeClass('animated fadeInLeft');
+          $('.hamburger svg').removeClass('animated fadeInRight');
+          $('.navContactIcons a svg').removeClass('animated slideInLeft');
+
           //Change theme to white
           anime({
-            targets:['.hamburger','.navContactIcons'],
+            targets:['.hamburger','.navContactIcons','#mobileLogo'],
             duration:200,
             translateY:-20,
             easing:'linear'
@@ -237,7 +236,7 @@ const pageSlideControl=()=>{
         .on("leave", function () {
           //Change theme to black
           anime({
-            targets:['.hamburger','.navContactIcons'],
+            targets:['.hamburger','.navContactIcons','#mobileLogo'],
             duration:200,
             translateY:0,
             easing:'linear'
@@ -262,6 +261,23 @@ const pageSlideControl=()=>{
               targets:'#contact-box p',
               update:function(){
                 $('#contact-box p').text("Let's Talk!")
+              }
+            })
+            $('#contact-form .group').addClass('animated fadeInUp');
+          })
+
+          $('#m-contact-box').on('mouseenter',function(){
+            let timeline = anime.timeline();
+            timeline
+            .add({
+              targets:'#m-contact-box',
+              translateY:-600,
+              scale:0.5
+            })
+            .add({
+              targets:'#m-contact-box p',
+              update:function(){
+                $('#m-contact-box p').text("Let's Talk!")
               }
             })
             $('#contact-form .group').addClass('animated fadeInUp');
@@ -620,6 +636,7 @@ $('#techTitle').on('click',function(){
   })
   $('.hamburger').fadeOut();
   $('.navContactIcons').fadeOut();
+  $('#mobileLogo').fadeOut();
   $('#box1').css({'background-color':'rgba(255, 255, 255, 0)'});
   // $('#box2').fadeOut();
   // $('#box3').fadeOut();
@@ -653,6 +670,22 @@ $('#techTitle').on('click',function(){
     .add({
       targets:'#circle',
       translateX:[0,-220],
+      easing:'easeOutExpo',
+    })
+
+  var mtechTimeline = anime.timeline();
+  mtechTimeline
+    .add({
+      targets:'#m-circle',
+      r:[20,250],
+      duration:500,
+      // translateX:-220,
+      easing:'easeInOutSine',
+    })
+    .add({
+      targets:'#m-circle',
+      translateY:[0,50],
+      translateX:[0,-245],
       easing:'easeOutExpo',
     })
 
@@ -703,6 +736,7 @@ $('#desTitle').on('click',function(){
   })
   $('.hamburger').fadeOut();
   $('.navContactIcons').fadeOut();
+  $('#mobileLogo').fadeOut();
   $('#box2').css({'background-color':'rgba(255, 255, 255, 0)'});
   // $('#box2').fadeOut();
   // $('#box3').fadeOut();
@@ -736,6 +770,22 @@ $('#desTitle').on('click',function(){
     .add({
       targets:'#circle2',
       translateX:[0,-250],
+      easing:'easeOutExpo',
+    })
+
+  var mdesTimeline = anime.timeline();
+  mdesTimeline
+    .add({
+      targets:'#m-circle2',
+      r:[20,250],
+      duration:500,
+      // translateX:-220,
+      easing:'easeInOutSine',
+    })
+    .add({
+      targets:'#m-circle2',
+      translateY:[0,50],
+      translateX:[0,-245],
       easing:'easeOutExpo',
     })
 
@@ -786,6 +836,7 @@ $('#proTitle').on('click',function(){
   })
   $('.hamburger').fadeOut();
   $('.navContactIcons').fadeOut();
+  $('#mobileLogo').fadeOut();
   $('#box3').css({'background-color':'rgba(255, 255, 255, 0)'});
   // $('#box2').fadeOut();
   // $('#box3').fadeOut();
@@ -822,6 +873,21 @@ $('#proTitle').on('click',function(){
       easing:'easeOutExpo',
     })
 
+  var mproTimeline = anime.timeline();
+  mproTimeline
+    .add({
+      targets:'#m-circle3',
+      r:[20,250],
+      duration:500,
+      // translateX:-220,
+      easing:'easeInOutSine',
+    })
+    .add({
+      targets:'#m-circle3',
+      translateY:[0,50],
+      translateX:[0,-245],
+      easing:'easeOutExpo',
+    })
     //
     anime({
       targets:['#proList','.skill-back-btn'],
@@ -866,6 +932,12 @@ $('.skill-back-btn').on('click',function(){
       easing:'easeOutExpo'
     })
     anime({
+      targets:'#m-circle',
+      r:[250,0],
+      duration:100,
+      easing:'easeOutExpo'
+    })
+    anime({
       targets:['#techList','.skill-back-btn'],
       duration:200,
       opacity:0
@@ -885,6 +957,7 @@ $('.skill-back-btn').on('click',function(){
     })
     $('.hamburger').fadeIn();
     $('.navContactIcons').fadeIn();
+    $('#mobileLogo').fadeIn();
     $('#box1').css({'background-color':'rgb(87, 220, 154)'});
     $('#box1').css({opacity:'1'});
     $('#box2').css({opacity:'1'});
@@ -911,6 +984,13 @@ $('.skill-back-btn').on('click',function(){
       easing:'easeOutExpo',
     })
     anime({
+      targets:'#m-circle2',
+      r:[250,0],
+      duration:100,
+      translateX:0,
+      easing:'easeOutExpo',
+    })
+    anime({
       targets:['#desList','.skill-back-btn'],
       duration:200,
       opacity:0
@@ -930,6 +1010,7 @@ $('.skill-back-btn').on('click',function(){
       })
       $('.hamburger').fadeIn();
       $('.navContactIcons').fadeIn();
+      $('#mobileLogo').fadeIn();
       $('#box2').css({'background-color':'rgb(129, 205, 229)'});
       $('#box1').css({opacity:'1'});
       $('#box2').css({opacity:'1'});
@@ -947,8 +1028,15 @@ $('.skill-back-btn').on('click',function(){
     $('#proTitle').fadeIn();
     // $('#proList').css({opacity:'0'});
     anime({
-      targets:'#circle3',
+      targets:['#circle3','#m-circle3'],
       r:[250,20],
+      duration:100,
+      translateX:0,
+      easing:'easeOutExpo',
+    })
+    anime({
+      targets:'#m-circle3',
+      r:[250,0],
       duration:100,
       translateX:0,
       easing:'easeOutExpo',
@@ -973,6 +1061,7 @@ $('.skill-back-btn').on('click',function(){
     })
     $('.hamburger').fadeIn();
     $('.navContactIcons').fadeIn();
+    $('#mobileLogo').fadeIn();
     $('#box3').css({'background-color':'rgb(220, 87, 87)'});
     $('#box1').css({opacity:'1'});
     $('#box2').css({opacity:'1'});
@@ -986,7 +1075,7 @@ $('.skill-back-btn').on('click',function(){
 
 const contactTitleShow=()=>{
   anime({
-    targets:'#contact-box',
+    targets:['#contact-box','#m-contact-box'],
     width:'600px',
     easing:'linear',
     duration:600,
@@ -996,7 +1085,7 @@ const contactTitleShow=()=>{
 
 const contactTitleHide=()=>{
   anime({
-    targets:['#contact-box','#contact-form'],
+    targets:['#contact-box','#contact-form','#m-contact-box'],
     width:['600px','0px'],
     easing:'linear',
     duration:600,
@@ -1089,7 +1178,7 @@ const main =()=>{
  // $('.startBtn').on('click',function(){
    //remove scroll disable when intro button is clicked
    $('body').removeClass('overflowHidden');
-   $('.intro-body').fadeOut();
+   // $('.intro-body').fadeOut();
    // $('body').removeClass('disableScroll');
    navMenuControl();
    introAnime();
@@ -1106,12 +1195,14 @@ const main =()=>{
    $('.landing-left .isAnimated').eq(2).css('animation-delay','2.4s');
    $('.landing-left .isAnimated').eq(3).css('animation-delay','2.6s');
    $('.landing-down').addClass('fadeInUp');
-   $('.landing-down').css('animation-delay','3s');
+   $('.landing-down').css('animation-delay','2s');
 
-   $('.hamburger svg').addClass('animated slideInRight');
-   $('.hamburger svg').css('animation-delay','3s');
+   $('.hamburger svg').addClass('animated fadeInRight');
+   $('.hamburger svg').css('animation-delay','2s');
    $('.navContactIcons a svg').addClass('animated slideInLeft');
-   $('.navContactIcons a svg').css('animation-delay','3s');
+   $('.navContactIcons a svg').css('animation-delay','2s');
+   $('#mobileLogo').addClass('animated fadeInLeft');
+   $('#mobileLogo').css('animation-delay','2s');
  // })
  //Initialise Icon colors for normal and nav icons
  $('.contactIcons').children().each(function(){
