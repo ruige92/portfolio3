@@ -928,9 +928,7 @@ $('#proTitle').on('click',function(){
 
 $('.skill-back-btn').on('click',function(){
   if( $('.skill-titles').hasClass('techTitle') ){
-    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-    const techScrollElement = $('#techTitle');
-    enableBodyScroll(techScrollElement);
+    bodyScrollLock.clearAllBodyScrollLocks();
     // console.log('tech working');
     //enable scrolling on intro page
     $('body').removeClass('overflowHidden');
@@ -982,9 +980,7 @@ $('.skill-back-btn').on('click',function(){
     // $('#desList').fadeOut();
     // $('#proList').fadeOut();
   }else if ( $('.skill-titles').hasClass('desTitle') ){
-    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-    const desScrollElement = $('#desTitle');
-    enableBodyScroll(desScrollElement);
+    bodyScrollLock.clearAllBodyScrollLocks();
     // console.log('des working');
     //enable scrolling on intro page
     $('body').removeClass('overflowHidden');
@@ -1036,9 +1032,7 @@ $('.skill-back-btn').on('click',function(){
       $('#box1').fadeIn();
       $('#box3').fadeIn();
   }else if ( $('.skill-titles').hasClass('proTitle') ){
-    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-    const proScrollElement = $('#proTitle');
-    enableBodyScroll(proScrollElement);
+    bodyScrollLock.clearAllBodyScrollLocks();
     // console.log('pro working');
     //enable scrolling on intro page
     $('body').removeClass('overflowHidden');
