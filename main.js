@@ -1236,6 +1236,7 @@ const main =()=>{
      $(this).children().attr('fill','#ccc');
    })
  })
+
  $('nav a').each(function(){
    $(this).on('mouseover',function(){
      $(this).css('color','#000');
@@ -1249,6 +1250,7 @@ const main =()=>{
      //set icon color to previous state
      setIconColor(previousIconColor);
      $('body').removeClass('overflowHidden');
+     bodyScrollLock.clearAllBodyScrollLocks();
      //change icon back to burger icon
      menuToClose(false);
      $('.hamburger').removeClass('closeBurger');
