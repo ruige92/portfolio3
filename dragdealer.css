@@ -31,7 +31,6 @@
 
 @media (min-device-width: 320px) and (max-device-width: 768px) {
   .dragdealer .red-bar {
-    width: 150px;
-    height: 20px;
+    display:none;
   }
 }
