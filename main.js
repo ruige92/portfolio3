@@ -444,6 +444,9 @@ const desktopExpModalControl=()=>{
       easing:'linear'
     })
   }).on('click',function(){
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#home-wrapper").offset().top
+    }, 500);
     const disableBodyScroll = bodyScrollLock.disableBodyScroll;
     const rightModalElement = $('#desktop-right-modal');
     disableBodyScroll(rightModalElement);
