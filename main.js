@@ -180,7 +180,6 @@ const pageSlideControl=()=>{
           .on("leave", function () {
             //Change theme to black
             // sliderBackgroundTextOut();
-
             // landingContentOut();
             blackBurger();
           })
@@ -404,6 +403,110 @@ $('#ggp-modal').on('click',function(){
   })
 })
 
+const desktopExpModalControl=()=>{
+  $('.readmore').on('mouseenter',function(){
+    if($(this).attr('id')=='ciscoStory'){
+      $('#ciscoModalStory').siblings().css({display:'none'});
+      $('#ciscoModalImg').siblings().css({display:'none'});
+      $('#right-modal-clostBtn').css({display:'block'});
+      $('#ciscoModalStory').css({display:'block'});
+      $('#ciscoModalImg').css({display:'block'});
+    }else if($(this).attr('id')=='kentStory'){
+      $('#kentModalStory').siblings().css({display:'none'});
+      $('#kentModalImg').siblings().css({display:'none'});
+      $('#right-modal-clostBtn').css({display:'block'});
+      $('#kentModalStory').css({display:'block'});
+      $('#kentModalImg').css({display:'block'});
+    }else if($(this).attr('id')=='riotStory'){
+      $('#riotModalStory').siblings().css({display:'none'});
+      $('#riotModalImg').siblings().css({display:'none'});
+      $('#right-modal-clostBtn').css({display:'block'});
+      $('#riotModalStory').css({display:'block'});
+      $('#riotModalImg').css({display:'block'});
+    }else if($(this).attr('id')=='ggpStory'){
+      $('#ggpModalStory').siblings().css({display:'none'});
+      $('#ggpModalImg').siblings().css({display:'none'});
+      $('#right-modal-clostBtn').css({display:'block'});
+      $('#ggpModalStory').css({display:'block'});
+      $('#ggpModalImg').css({display:'block'});
+    }
+    anime({
+      targets:'.readmore',
+      translateY:5,
+      duration:300,
+      easing:'linear'
+    })
+  }).on('mouseleave',function(){
+    anime({
+      targets:'.readmore',
+      translateY:0,
+      duration:300,
+      easing:'linear'
+    })
+  }).on('click',function(){
+    const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+    const rightModalElement = $('#desktop-right-modal');
+    disableBodyScroll(rightModalElement);
+    $('body').addClass('overflowHidden');
+    $('.hamburger').fadeOut();
+    $('.navContactIcons').fadeOut();
+    anime({
+      targets:'#desktop-right-modal',
+      translateX:['100%',0],
+      duration:300,
+      easing:'linear'
+    })
+    anime({
+      targets:'#desktop-left-modal',
+      translateX:['-100%',0],
+      duration:300,
+      easing:'linear'
+    })
+    anime({
+      targets:['#image-carousel','#slider-control'],
+      opacity:[1,0],
+      duration:200,
+      easing:'linear',
+      update:function(){
+        $('#slider-control').removeClass('animated fadeInLeft');
+        $('#image-carousel').css({'pointer-events':'none'});
+        $('#slider-control').css({'pointer-events':'none'});
+      }
+    })
+  })
+  $('#right-modal-clostBtn').on('click',function(){
+    // const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+    // const rightModalElement = $('#desktop-right-modal');
+    // enableBodyScroll(rightModalElement);
+    bodyScrollLock.clearAllBodyScrollLocks();
+    $('body').removeClass('overflowHidden');
+    $('.hamburger').fadeIn();
+    $('.navContactIcons').fadeIn();
+    anime({
+      targets:'#desktop-right-modal',
+      translateX:[0,'100%'],
+      duration:300,
+      easing:'linear'
+    })
+    anime({
+      targets:'#desktop-left-modal',
+      translateX:[0,'-100%'],
+      duration:300,
+      easing:'linear'
+    })
+    anime({
+      targets:['#image-carousel','#slider-control'],
+      opacity:[0,1],
+      duration:500,
+      easing:'linear',
+      update:function(){
+        $('#image-carousel').css({'pointer-events':'auto'});
+        $('#slider-control').css({'pointer-events':'auto'});
+      }
+    })
+  })
+}
+
 $('.exp-modal-closeBtn').on('click',function(){
   if($('#first-exp-modal').css('opacity')==1){
     $('#first-exp').addClass('animated fadeInLeft delay-0-5s');
@@ -416,7 +519,6 @@ $('.exp-modal-closeBtn').on('click',function(){
       duration:300,
       easing:'easeInExpo'
     })
-    console.log('first modal detected!')
   }else if($('#second-exp-modal').css('opacity')==1){
     $('#second-exp').addClass('animated fadeInLeft delay-0-5s');
     $('.hamburger').fadeIn();
@@ -465,26 +567,13 @@ const sliderImageSectionShow=()=>{
       $('#image-carousel img').addClass('animated slideInLeft');
       $('#slider-control').addClass('animated fadeInLeft');
       $('.image-description').addClass('animated fadeInRight');
-      $('#background-text').addClass('animated fadeInUp');
-      $('#background-text').removeClass('fadeOutDown');
     }
   })
 }
 const sliderImageSectionHide=()=>{
-  anime({
-    targets:['#image-carousel','#background-text'],
-    // scale:'0.8',
-    opacity:'0',
-    duration:100,
-    easing: 'easeInQuart',
-    update:function(){
-      $('#image-carousel img').removeClass('animated slideInLeft')
-      $('#slider-control').removeClass('animated fadeInLeft');
-      $('.image-description').removeClass('animated fadeInRight');
-      $('#background-text').removeClass('fadeInUp');
-      $('#background-text').addClass('fadeOutDown');
-    }
-  })
+  $('#image-carousel img').removeClass('animated slideInLeft')
+  $('#slider-control').removeClass('animated fadeInLeft');
+  $('.image-description').removeClass('animated fadeInRight');
 }
 
 const sliderImageOut=()=>{
@@ -694,7 +783,7 @@ const contentSlider=()=>{
   });
   //CHECKING IMAGE DRAG
   let isDragging = false;
-  $(".slide")
+  $(".slide img")
   .mousedown(function() {
       //clear out animated class to allow slide animation
       $('#image-carousel img').removeClass('animated slideInLeft')
@@ -759,6 +848,7 @@ const contentSlider=()=>{
       }
   });
 }
+
 
 const skillTitlesAnimation=(tag)=>{
   $(tag).each(function(){
@@ -1370,6 +1460,7 @@ const main =()=>{
    pageSlideControl();
    scrollDownIcon();
    contentSlider();
+   desktopExpModalControl();
    dragSlider();
    //Adding animations to the intro content
    $('.landing-left .isAnimated').addClass('fadeIn');
