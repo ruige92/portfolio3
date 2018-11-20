@@ -29,8 +29,14 @@
   background: #898989;
 }
 
-@media (min-device-width: 320px) and (max-device-width: 768px) {
+@media (min-device-width: 320px) and (max-device-width: 1260px) {
+  .dragdealer {
+    display:none;
+  }
   .dragdealer .red-bar {
+    display:none;
+  }
+  .dragdealer .handle {
     display:none;
   }
 }
