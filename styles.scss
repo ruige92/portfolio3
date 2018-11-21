@@ -39,7 +39,7 @@ $screen-xl-min: 1260px;
 }
 // Media query for regular desktop view
 @mixin regDesktop {
-    @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}){
+    @media (min-width: #{$screen-md-min}+1) and (max-width: #{$screen-lg-min}){
         @content;
     }
 }
@@ -51,7 +51,7 @@ $screen-xl-min: 1260px;
 }
 
 @mixin lgDesktop{
-  @media (min-width: #{$screen-lg-min}){
+  @media (min-width: #{$screen-lg-min}+1){
       @content;
   }
 }
@@ -366,7 +366,7 @@ a {text-decoration: none;color:$black}
           line-height:140px;
         }
         @include tablet{
-          margin-top:100px;
+          margin-top:50px;
           margin-left:100px;
           line-height:140px;
         }
@@ -516,6 +516,9 @@ a {text-decoration: none;color:$black}
             width:100px;
             height:100px;
           }
+          @include tablet{
+            margin-top:-50px;
+          }
         }
       }
     }
@@ -608,6 +611,10 @@ a {text-decoration: none;color:$black}
           margin-left:-100px;
           margin-top:-100px;
           @include regDesktop{
+            width:600px;
+            height:350px;
+          }
+          @include tablet{
             width:600px;
             height:350px;
           }
