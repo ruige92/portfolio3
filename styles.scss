@@ -86,12 +86,13 @@ a {text-decoration: none;color:$black}
     cursor:pointer;
     @include phone{
       right:0%;
+      top: 80px;
     }
     #menuIcon{
       @include phone{
         margin-right:50px;
-        width:100px;
-        height:100px;
+        width:80px;
+        height:80px;
       }
     }
   }
@@ -108,7 +109,7 @@ a {text-decoration: none;color:$black}
     cursor:pointer;
     @include phone{
       display:block;
-      margin-top:-10px;
+      margin-top:0px;
     }
     svg{
       display:none;
