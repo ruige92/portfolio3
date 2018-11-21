@@ -39,7 +39,7 @@ $screen-xl-min: 1260px;
 }
 // Media query for regular desktop view
 @mixin regDesktop {
-    @media (min-width: #{$screen-md-min}+1) and (max-width: #{$screen-lg-min}){
+    @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) {
         @content;
     }
 }
@@ -51,10 +51,11 @@ $screen-xl-min: 1260px;
 }
 
 @mixin lgDesktop{
-  @media (min-width: #{$screen-lg-min}+1){
+  @media (min-width: #{$screen-lg-min}) {
       @content;
   }
 }
+
 
 //style reset
 *{
@@ -88,11 +89,18 @@ a {text-decoration: none;color:$black}
       right:0%;
       top: 80px;
     }
+    @include tablet{
+      top: 65px;
+    }
     #menuIcon{
       @include phone{
         margin-right:50px;
         width:80px;
         height:80px;
+      }
+      @include tablet{
+        width:70px;
+        height:70px;
       }
     }
   }
@@ -111,6 +119,9 @@ a {text-decoration: none;color:$black}
       display:block;
       margin-top:0px;
     }
+    @include tablet{
+      margin-top:5px;
+    }
     svg{
       display:none;
       @include phone{
@@ -119,6 +130,10 @@ a {text-decoration: none;color:$black}
         margin-top:40px;
         width:100px;
         height:250px;
+      }
+      @include tablet{
+        width:80px;
+        height:200px;
       }
     }
   }
@@ -164,6 +179,10 @@ a {text-decoration: none;color:$black}
       display:flex;
       flex-direction: column;
     }
+    @include tablet{
+      display:flex;
+      flex-direction: column;
+    }
     // styles for navigation items, link, symbols
     a{
       margin:20px 0px;
@@ -193,6 +212,13 @@ a {text-decoration: none;color:$black}
         padding:0px 30px;
         margin-top:-50px;
       }
+      @include regDesktop{
+        font-size:3rem;
+        display:flex;
+        flex-direction: column;
+        height:400px;
+        margin-top:-50px;
+      }
     }
     //navigation icons
     .contactIcons{
@@ -216,7 +242,7 @@ a {text-decoration: none;color:$black}
         align-items: center;
       }
       @include regDesktop{
-        margin-top:-20px;
+        margin-top:10px;
       }
       a{
         margin-left:150px;
@@ -227,7 +253,9 @@ a {text-decoration: none;color:$black}
           // margin: 0 auto;
           margin:0;
         }
-
+        @include regDesktop{
+          height:100px;
+        }
       }
     }
     svg{
@@ -239,10 +267,19 @@ a {text-decoration: none;color:$black}
         height:100px;
         margin-left:0;
       }
+      @include tablet{
+        width:80px;
+        height:80px;
+        margin-top:-100px;
+      }
       @include smDesktop{
         width:30px;
         height:30px;
         margin-left:0;
+      }
+      @include regDesktop{
+        height:100px;
+        margin-top:20px;
       }
     }
   }
@@ -366,7 +403,7 @@ a {text-decoration: none;color:$black}
           line-height:140px;
         }
         @include tablet{
-          margin-top:50px;
+          margin-top:0px;
           margin-left:100px;
           line-height:140px;
         }
@@ -517,7 +554,7 @@ a {text-decoration: none;color:$black}
             height:100px;
           }
           @include tablet{
-            margin-top:-50px;
+            margin-top:-40px;
           }
         }
       }
@@ -862,7 +899,7 @@ a {text-decoration: none;color:$black}
         background-size: cover;
         border:5px solid black;
         @include tablet{
-          height:900px;
+          height:800px;
         }
         @include smDesktop{
           height:500px;
@@ -945,6 +982,9 @@ a {text-decoration: none;color:$black}
             width:40px;
             height:40px;
           }
+          @include tablet{
+            bottom:80px;
+          }
         }
       }
       .exp-modal-header{
@@ -954,10 +994,9 @@ a {text-decoration: none;color:$black}
         width:50%;
         height:400px;
         @include tablet{
-          margin-top:20px;
-        }
-        @include smDesktop{
-          margin-top:20px;
+          width:30%;
+          height:200px;
+          margin-top:80px;
         }
         @include smDesktop{
           width:30%;
@@ -1010,11 +1049,20 @@ a {text-decoration: none;color:$black}
           height:200px;
           margin-top:30px;
         }
+        @include tablet{
+          background-size: contain;
+          width:30%;
+          height:200px;
+          margin-top:40px;
+        }
       }
       .exp-content{
         margin-top:-50px;
         @include smDesktop{
           margin-top:10px;
+        }
+        @include tablet{
+          margin-top:40px;
         }
       }
     }
@@ -1029,11 +1077,20 @@ a {text-decoration: none;color:$black}
           height:200px;
           margin-top:30px;
         }
+        @include tablet{
+          background-size: contain;
+          width:30%;
+          height:200px;
+          margin-top:40px;
+        }
       }
       .exp-content{
         margin-top:-50px;
         @include smDesktop{
           margin-top:10px;
+        }
+        @include tablet{
+          margin-top:40px;
         }
       }
     }
@@ -1048,11 +1105,20 @@ a {text-decoration: none;color:$black}
           height:200px;
           margin-top:30px;
         }
+        @include tablet{
+          background-size: contain;
+          width:30%;
+          height:200px;
+          margin-top:40px;
+        }
       }
       .exp-content{
         margin-top:-50px;
         @include smDesktop{
           margin-top:10px;
+        }
+        @include tablet{
+          margin-top:40px;
         }
       }
     }
@@ -1066,7 +1132,7 @@ a {text-decoration: none;color:$black}
         border:5px solid black;
         // background: red;
         @include tablet{
-          height:900px;
+          height:800px;
         }
         @include smDesktop{
           height:500px;
@@ -1082,7 +1148,7 @@ a {text-decoration: none;color:$black}
         background-size: cover;
         border:5px solid black;
         @include tablet{
-          height:900px;
+          height:800px;
         }
         @include smDesktop{
           height:500px;
@@ -1099,7 +1165,7 @@ a {text-decoration: none;color:$black}
         background-size: cover;
         border:5px solid black;
         @include tablet{
-          height:900px;
+          height:800px;
         }
         @include smDesktop{
           height:500px;
@@ -1672,6 +1738,7 @@ a {text-decoration: none;color:$black}
       }
       @include tablet{
         display:block;
+        margin-top:50px;
       }
       p{
         display:flex;
