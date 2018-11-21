@@ -1407,7 +1407,7 @@ a {
 @media (min-width: 768px) and (max-width: 1024px) {
   #skills-wrapper .skill-head #techHead, #skills-wrapper .skill-head #desHead, #skills-wrapper .skill-head #proHead {
     text-align: center;
-    font-size: 2em;
+    font-size: calc((.4em + 1vmin) + (.4em + 1vmax));
     letter-spacing: 0.1em;
     margin-left: 60px;
   }
@@ -1475,7 +1475,7 @@ a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #skills-wrapper .skill-list #techList, #skills-wrapper .skill-list #desList, #skills-wrapper .skill-list #proList {
-    font-size: 2em;
+    font-size: calc((.4em + 1vmin) + (.4em + 1vmax));
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
@@ -1511,8 +1511,8 @@ a {
     justify-content: center;
     align-items: center;
     height: 50px;
-    padding: 0;
-    margin: 20px 0;
+    padding: calc((.1em + .3vmin) + (.1em + .3vmax));
+    margin: calc((.2em + .5vmin) + (.2em + .5vmax));
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
@@ -1547,8 +1547,8 @@ a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #skills-wrapper .skill-back-btn svg {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
